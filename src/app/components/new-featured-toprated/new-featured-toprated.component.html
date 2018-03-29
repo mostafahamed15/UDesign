@@ -1,0 +1,129 @@
+<div class="custom-blocks">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="block-item">
+                    <h3>NEW-IN</h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6" *ngFor="let top of products['top']">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="block-thumb">
+                                        <div style=" width:110; height:130" class="main-img">
+                                            <a href="single-product.html">
+                                                <img width="110" height="130" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div style=" width:110; height:130" class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img  width="110" height="130" class="img-responsive"  src="{{top['xfeatured_image']}}"  />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4><a href="single-product.html">{{top['name']}}</a></h4>
+                                    <p class="price">{{top['lowest_price']}}EGP</p>
+                                    <div class="group-buttons">
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="pe-7s-cart"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.new-in -->
+            </div>
+            <div class="col-md-4">
+                <div class="block-item">
+                    <h3>FEATURED</h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6" *ngFor="let top of products['top']">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="block-thumb">
+                                        <div style=" width:110; height:130" class="main-img">
+                                            <a href="single-product.html">
+                                                <img width="110" height="130" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div style=" width:110; height:130" class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img  width="110" height="130" class="img-responsive"  src="{{top['xfeatured_image']}}"  />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4><a href="single-product.html">{{top['name']}}</a></h4>
+                                    <p class="price">{{top['lowest_price']}}EGP</p>
+                                    <div class="group-buttons">
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="pe-7s-cart"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.featured -->
+            </div>
+            <div class="col-md-4">
+                <div class="block-item">
+                    <h3>TOP RATED</h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6" *ngFor="let top of products['top']">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="block-thumb">
+                                        <div style=" width:110; height:130" class="main-img">
+                                            <a href="single-product.html">
+                                                <img width="110" height="130" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div style=" width:110; height:130" class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img  width="110" height="130" class="img-responsive"  src="{{top['xfeatured_image']}}"  />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4><a href="single-product.html">{{top['name']}}</a></h4>
+                                    <p class="price">{{top['lowest_price']}}EGP</p>
+                                    <div class="group-buttons">
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="pe-7s-cart"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.top-rated -->
+            </div>
+        </div>
+    </div>
+</div>

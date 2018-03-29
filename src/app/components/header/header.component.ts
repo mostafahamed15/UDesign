@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../../services/auth.service';
+
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+  public isLogged:boolean=false;
+	public UserInfo = {};
+  constructor(public router:Router,
+		public modalService: NgbModal,
+		public cookieService: CookieService,
+		public auth: AuthService) { }
+
+  ngOnInit() {
+  }
+
+}

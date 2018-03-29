@@ -1,0 +1,169 @@
+<div class="trending-clothing" >
+    <div class="container">
+        <h3>TRENDY FURNITURE</h3>
+        <h5>Trending</h5>
+        <div id="carousel-1">
+            <div class="tab-heading">
+                <span>FEATURED</span>
+                <span>KITCHEN</span>
+                <span>BEDROOM</span>
+                <span>LIVING ROOM</span>
+            </div>
+            
+            <div class="box-content" >
+                <div class="showcase">
+                    <div class="row">
+                        <div class="box-product" >
+                            <div *ngFor="let featured of products" class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="product-thumb">
+                                        <div class="main-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}"alt="img" />
+                                            </a>
+                                        </div>
+                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <h4 class="product-name"><a href="single-product.html">{{featured['description']}}</a></h4>
+                                    <p class="product-price">
+                                    {{featured['lowest_price']}} EGP
+                                    </p>
+                                    <div class="group-buttons">
+                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <span>Add to Cart</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="row">
+                        <div class="box-product">
+                            <div *ngFor="let featured of products" class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="product-thumb">
+                                        <div class="main-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}"alt="img" />
+                                            </a>
+                                        </div>
+                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <h4 class="product-name"><a href="single-product.html">{{featured['description']}}</a></h4>
+                                    <p class="product-price">
+                                    {{featured['lowest_price']}} EGP
+                                    </p>
+                                    <div class="group-buttons">
+                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <span>Add to Cart</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="row">
+                        <div class="box-product">
+                            <div *ngFor="let featured of products" class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="product-thumb">
+                                        <div class="main-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}"alt="img" />
+                                            </a>
+                                        </div>
+                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <h4 class="product-name"><a href="single-product.html">{{featured['description']}}</a></h4>
+                                    <p class="product-price">
+                                    {{featured['lowest_price']}} EGP
+                                    </p>
+                                    <div class="group-buttons">
+                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <span>Add to Cart</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="row">
+                        <div class="box-product">
+                            <div *ngFor="let featured of products" class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="product-thumb">
+                                        <div class="main-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}" alt="img" />
+                                            </a>
+                                        </div>
+                                        <div class="overlay-img">
+                                            <a href="single-product.html">
+                                                <img class="img-responsive" src="{{featured.top.xfeatured_image}}"alt="img" />
+                                            </a>
+                                        </div>
+                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                    <h4 class="product-name"><a href="single-product.html">{{featured['description']}}</a></h4>
+                                    <p class="product-price">
+                                    {{featured['lowest_price']}} EGP
+                                    </p>
+                                    <div class="group-buttons">
+                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <span>Add to Cart</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                        <i class="pe-7s-repeat"></i>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                        <i class="pe-7s-like"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<ngb-carousel class="full-carousel">
+  <ng-template ngbSlide  *ngFor="let slide of slides">
+    <img src="{{slide.ximage}}" alt="Random first slide">
+    <div class="carousel-caption">
+        <h3>{{slide.advertisment_name}}</h3>
+
+      <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+    </div>
+  </ng-template>
+</ngb-carousel>
+

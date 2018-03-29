@@ -1,0 +1,194 @@
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/bootstrap.min.css */
+figure,footer{display:block;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+figure{margin:1em 40px;}
+button,input{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0;}
+input{line-height:normal;}
+fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+a[href^="javascript:"]:after{content:"";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+h3,p{orphans:3;widows:3;}
+h3{page-break-after:avoid;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+button,input{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#337ab7;text-decoration:none;}
+a:focus,a:hover{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+figure{margin:0;}
+img{vertical-align:middle;}
+h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h3{margin-top:20px;margin-bottom:10px;}
+h4{margin-top:10px;margin-bottom:10px;}
+h3{font-size:24px;}
+h4{font-size:18px;}
+p{margin:0 0 10px;}
+ul{margin-top:0;margin-bottom:10px;}
+.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+@media (min-width:768px){
+.container{width:750px;}
+}
+@media (min-width:992px){
+.container{width:970px;}
+}
+@media (min-width:1200px){
+.container{width:1170px;}
+}
+.row{margin-right:-15px;margin-left:-15px;}
+.col-lg-12,.col-lg-3,.col-md-12,.col-md-3,.col-sm-12,.col-sm-6,.col-xs-12,.col-xs-6{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+.col-xs-12,.col-xs-6{float:left;}
+.col-xs-12{width:100%;}
+.col-xs-6{width:50%;}
+@media (min-width:768px){
+.col-sm-12,.col-sm-6{float:left;}
+.col-sm-12{width:100%;}
+.col-sm-6{width:50%;}
+}
+@media (min-width:992px){
+.col-md-12,.col-md-3{float:left;}
+.col-md-12{width:100%;}
+.col-md-3{width:25%;}
+}
+@media (min-width:1200px){
+.col-lg-12,.col-lg-3{float:left;}
+.col-lg-12{width:100%;}
+.col-lg-3{width:25%;}
+}
+fieldset{min-width:0;padding:0;margin:0;border:0;}
+.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+.form-control::-moz-placeholder{color:#999;opacity:1;}
+.form-control:-ms-input-placeholder{color:#999;}
+.form-control::-webkit-input-placeholder{color:#999;}
+.form-control::-ms-expand{background-color:transparent;border:0;}
+.container:after,.container:before,.row:after,.row:before{display:table;content:" ";}
+.container:after,.row:after{clear:both;}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/normalize.css */
+figure,footer{display:block;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+figure{margin:1em 40px;}
+button,input{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/icomoon.css */
+[class^="icon-"]{speak:none;line-height:1;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;-moz-osfont-smoothing:grayscale;font-family:'icomoon'!important;-webkit-font-smoothing:antialiased;}
+.icon-facebook-logo-outline:before{content:'\e900';}
+.icon-instagram-social-outlined-logo:before{content:'\e90f';}
+.icon-twitter-social-outlined-logo:before{content:'\e91b';}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/transitions.css */
+*:after,*:before,a,.tg-socialicons li a{-webkit-transition:all 300ms ease-in-out;-moz-transition:all 300ms ease-in-out;-ms-transition:all 300ms ease-in-out;-o-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/main.css */
+*{margin:0px;padding:0px;}
+body h3,body h4{color:#000;margin:0 0 8px;font-weight:400;line-height:1.5;font-style:normal;text-transform:capitalize;font-family:'Montserrat', Arial, Helvetica, sans-serif;}
+h3{font-size:24px;}
+h4{font-size:18px;}
+h4 a{color:#000;}
+p{margin:0 0 20px;line-height:23px;letter-spacing:normal;}
+a{text-decoration:none;}
+a:hover,a:focus,a:active{outline:none;text-decoration:none;}
+ul{margin:0;}
+figure{margin-bottom:6px;position:relative;}
+img{height:auto;max-width:100%;}
+button{border:none;}
+.form-control,input[type="email"]{color:#676767;outline:none;height:42px;background:#fff;font-size:13px;box-shadow:none;line-height:18px;padding:10px 20px;border-radius:4px;display:inline-block;vertical-align:middle;border:1px solid #dbdbdb;text-transform:capitalize;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.form-control::-webkit-input-placeholder{color:#676767;}
+.form-control:-moz-placeholder{color:#676767;}
+.form-control::-moz-placeholder{color:#676767;}
+.form-control:-ms-input-placeholder{color:#676767;}
+.form-control::-ms-input-placeholder{color:#676767;}
+input:focus,.form-control:focus{color:#676767;border-color:#676767;box-shadow:none!important;}
+li{line-height:28px;list-style:disc inside none;}
+.tg-haslayout{width:100%;float:left;}
+.tg-socialicons{overflow:hidden;list-style:none;text-align:center;line-height:30px;}
+.tg-socialicons li{float:left;padding:0 4px;line-height:inherit;list-style-type:none;}
+.tg-socialicons li a{width:40px;height:40px;color:#fff;display:block;background:#000;overflow:hidden;line-height:30px;position:relative;text-align:center;border-radius:30px;text-transform:capitalize;}
+.tg-socialicons li a i{color:#fff;width:30px;display:block;font-size:13px;line-height:30px;text-align:center;}
+.tg-socialicons li a:hover{color:#fff;}
+.tg-socialicons.tg-socialiconsvtwo li a{color:#000;}
+.tg-socialicons.tg-socialiconsvtwo li a i{color:#000;width:auto;height:auto;font-size:18px;line-height:normal;}
+.tg-description{width:100%;float:left;}
+.tg-formtheme{width:100%;float:left;position:relative;}
+.tg-formtheme fieldset{border:0;margin:0;padding:0;width:100%;float:left;}
+.tg-widget{width:100%;float:left;}
+.tg-widgettitle{width:100%;float:left;padding:0 0 30px;}
+.tg-widgettitle h3{margin:0;color:#010101;font-size:18px;font-weight:600;line-height:14px;}
+.tg-widgetcontent{width:100%;float:left;}
+.tg-widgetcontent ul{width:100%;float:left;font-size:15px;line-height:18px;list-style:none;}
+.tg-widgetcontent ul li{width:100%;float:left;line-height:inherit;list-style-type:none;}
+.tg-widgetcontent ul li + li{padding:20px 0 0;}
+.tg-widgetcontent ul li a{color:#c3c3c3;}
+.tg-widgetcontent ul li i{color:#676767;font-size:14px;font-weight:400;line-height:15px;font-style:normal;}
+.tg-widgetcontent ul li figure{margin:0;float:left;}
+.tg-widgetcontent ul li figure a{display:block;}
+.tg-widgetcontent ul li figure a img{width:100%;height:auto;display:block;}
+.tg-newcontent{overflow:hidden;padding:0 0 0 17px;}
+.tg-newcontent h4{color:#fff;margin:0 0 10px;font-size:14px;line-height:14px;}
+.tg-newcontent h4 a{color:#fff;}
+.tg-newcontent .tg-description{padding:0 0 10px;}
+.tg-newcontent .tg-description p{margin:0;font-size:13px;line-height:16px;}
+.tg-newcontent time{width:100%;float:left;font-size:10px;line-height:13px;}
+.tg-widgettext .tg-widgetcontent .tg-description{padding:0 0 20px;}
+.tg-widgettext .tg-widgetcontent .tg-description p{margin:0;}
+.tg-widgettext .tg-widgetcontent span{width:100%;float:left;color:#fff;font-size:16px;font-weight:300;line-height:16px;font-family:'Montserrat', Arial, Helvetica, sans-serif;}
+.tg-widgettext .tg-widgetcontent > a{font-size:13px;line-height:13px;}
+.tg-widgettext .tg-widgetcontent .tg-socialicons{padding:20px 0 0;}
+.tg-widgettext .tg-widgetcontent .tg-socialicons li{width:auto;padding:0 4px;}
+.tg-widgettext .tg-widgetcontent .tg-socialicons li:first-child{padding-left:0;}
+.tg-widgettext .tg-widgetcontent .tg-socialicons li a{background:#fff;}
+.tg-widgettext .tg-widgetcontent .tg-socialicons li a i{line-height:40px;}
+.tg-widgettravelunews .tg-widgetcontent ul li + li{padding:30px 0 0;}
+.tg-widgetdestinations .tg-widgetcontent ul li a{position:relative;padding:0 0 0 25px;}
+.tg-widgetdestinations .tg-widgetcontent ul li a:before{top:0;left:0;font-size:18px;line-height:18px;content:'\e908';position:absolute;font-family:'icomoon';}
+.tg-widgetnewsletter .tg-widgetcontent .tg-description{padding:0 0 30px;}
+.tg-widgetnewsletter .tg-widgetcontent .tg-description p{margin:0;}
+.tg-formnewsletter fieldset{overflow:hidden;border-radius:5px;position:relative;}
+.tg-formnewsletter .form-control{border:0;z-index:1;position:relative;padding-right:60px;}
+.tg-formnewsletter button{top:0;right:0;z-index:2;width:50px;height:42px;line-height:42px;position:absolute;}
+.tg-widgetnewsletter .tg-widgetcontent span{width:100%;float:left;color:#676767;font-size:13px;line-height:16px;padding:20px 0 0;}
+.tg-widgetcontent .tg-newcontent h4{color:#000;font-size:16px;line-height:17px;}
+.tg-widgetcontent .tg-newcontent h4 a{color:#000;}
+.tg-footercolumn .tg-widgetcontent .tg-newcontent h4 a{color:#fff;}
+.tg-footer{width:100%;float:left;background:#000;}
+.tg-fourcolumns{width:100%;float:left;}
+.tg-footercolumn{width:100%;float:left;color:#c3c3c3;padding:120px 0;}
+.tg-footercolumn .tg-widgettitle h3{color:#fff;}
+.tg-footerbar{width:100%;float:left;color:#676767;padding:20px 0;min-height:55px;font-size:13px;line-height:15px;background:#161616;}
+.tg-footerbar p{margin:0;text-align:center;line-height:inherit;}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/color.css */
+a,a:hover,a:focus,a:active,.tg-socialicons li a:hover i{color:#ff7550;}
+.tg-formnewsletter button{background:#ff7550;}
+input:focus,.form-control:focus{border-color:#ff7550;}
+.tg-widgettext .tg-widgetcontent > a,.tg-footercolumn .tg-widgetcontent ul li a:hover,.tg-footercolumn .tg-widgetcontent ul li a:hover:before{color:#fee133;}
+/*! CSS Used from: file:///home/metanoia/Music/traveluhtml/main-file/travelu/css/responsive.css */
+@media (max-width:1199px){
+.tg-newcontent .tg-description p,.tg-footercolumn .tg-widgetcontent .tg-newcontent h4 a{width:100%;display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+}
+@media (max-width:991px){
+.tg-fourcolumns{padding:90px 0;}
+.tg-footercolumn{padding:30px 0;min-height:260px;}
+}
+@media (max-width:767px){
+.tg-footercolumn{min-height:290px;}
+}
+@media (max-width:568px){
+.tg-fourcolumns > div > div > [class^="col-"],.tg-fourcolumns > div > div > [class*="col-"]{width:100%;}
+.tg-footercolumn{min-height:auto;}
+}
