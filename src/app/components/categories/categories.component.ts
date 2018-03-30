@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../services/category.service';
 import 'rxjs/add/operator/map';
-
+import { SlickModule } from 'ngx-slick';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',

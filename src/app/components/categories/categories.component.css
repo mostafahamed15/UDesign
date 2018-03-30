@@ -1,0 +1,9 @@
+.margin{
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.shop-by-categories{
+    background-color:lightgray;
+    margin: 0;
+}

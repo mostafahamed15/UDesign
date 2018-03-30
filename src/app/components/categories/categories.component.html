@@ -2,30 +2,31 @@
 
         <div class="shop-by-categories">
             <div class="container">
-                <h3>SHOP BY CATEGORIES</h3>
-                <h5>Featured categories</h5>
+                <h3 class = "margin">SHOP BY CATEGORIES</h3>
+                <h3>Featured categories</h3>
             
-        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let category of topp['topCats']" class="slide">
-                    <div class="box-content">
-                        <div class="category-item">
-                            <div class="category-thumb">
-                                <div style="height: 155px; width:235px" class="main-img">
-                                    <a href="parallax-category-shop.html">
-                                        <img  height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
-                                    </a>
-                                </div>
-                                <div class="overlay-img">
-                                    <a href="parallax-category-shop.html">
-                                        <img height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
-                                    </a>
-                                </div>
-                                   <h4 class="product-name"><a href="/categ">{{category['category_name']}}</a></h4>
-                            </div>
-                           
-                        </div>
- <h4><a href="parallax-category-shop.html">{{category['name']}}</a></h4>
-        </div>
-    </div>
-    </ngx-slick>
-
+                <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+                    <div ngxSlickItem *ngFor="let category of topp['topCats']" class="slide">
+                                <div class="box-content">
+                                    <div class="category-item">
+                                        <div class="category-thumb">
+                                            <div style="height: 155px; width:235px" class="main-img">
+                                                <a href="parallax-category-shop.html">
+                                                    <img  height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
+                                                </a>
+                                            </div>
+                                            <div class="overlay-img">
+                                                <a href="parallax-category-shop.html">
+                                                    <img height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
+                                                </a>
+                                            </div>
+                                               <h4 class="product-name"><a href="/categ">{{category['category_name']}}</a></h4>
+                                        </div>
+                                       
+                                    </div>
+             <h4><a href="parallax-category-shop.html">{{category['name']}}</a></h4>
+                    </div>
+                </div>
+                </ngx-slick>
+            
+            

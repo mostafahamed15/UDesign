@@ -1,0 +1,24 @@
+
+<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <div class="box-content">
+                  <div class="category-item">
+                      <div class="category-thumb">
+                          <div style="height: 155px; width:235px" class="main-img">
+                              <a href="parallax-category-shop.html">
+                                  <img  height="155" width="235" class="img-responsive" src="{{slide.ximage}}" alt="img" />
+                              </a>
+                          </div>
+                          <div class="overlay-img">
+                              <a href="parallax-category-shop.html">
+                                  <img height="155" width="235" class="img-responsive" src="{{slide.ximage}}" alt="img" />
+                              </a>
+                          </div>
+                             <h4 class="product-name"><a href="/categ">{{category['category_name']}}</a></h4>
+                      </div>
+                     
+                  </div>
+<h4><a href="parallax-category-shop.html">{{category['name']}}</a></h4>
+  </div>
+</div>
+</ngx-slick>

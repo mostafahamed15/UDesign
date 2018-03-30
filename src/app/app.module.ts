@@ -29,6 +29,7 @@ import {CommonService} from './services/common.service';
 import {PostsService} from './services/post.service';
 import {ProductService} from './services/product.service';
 import { SlickModule } from 'ngx-slick';
+import {AdsService} from './services/ads.service';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -47,6 +48,10 @@ import { InteriorComponent } from './pages/interior/interior.component';
 import { LatestnewsComponent } from './pages/latestnews/latestnews.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { SigninComponent } from './components/header/signin/signin.component';
+import { BrandsComponent } from './components/brands/brands.component';
+import { AdvertisementsComponent } from './components/advertisements/advertisements.component';
+
 
 const ROUTES: Routes = [
   // {path:'signup',component:SignupComponent},
@@ -87,6 +92,9 @@ const ROUTES: Routes = [
     LatestnewsComponent,
     ProfilePageComponent,
     ContactusComponent,
+    SigninComponent,
+    BrandsComponent,
+    AdvertisementsComponent,
     
   
   
@@ -124,7 +132,8 @@ const ROUTES: Routes = [
     CategoryService,
     CommonService,
     PostsService,
-    ProductService
+    ProductService,
+    AdsService
 
 
   ],
