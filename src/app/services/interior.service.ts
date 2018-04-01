@@ -8,13 +8,13 @@ export class InteriorService {
   constructor(public urlService:UrlService,
      public http: HttpClient ) { }
      public index(data){
-       return this.http.get(this.urlService.getApiUrl()+ 'interior_office', {params: data})
+       return this.http.get(this.urlService.getApiUrl()+ 'interiors', {params: data})
      }
      public get(){
-      return this.http.get(this.urlService.getApiUrl()+ 'interior_office')
+      return this.http.get(this.urlService.getApiUrl()+ 'interiors')
     }
     public show(id){
-      return this.http.get(this.urlService.getApiUrl()+ 'interior_office/', id)
+      return this.http.get(this.urlService.getApiUrl()+ 'interiors/', id)
     }
 
 }

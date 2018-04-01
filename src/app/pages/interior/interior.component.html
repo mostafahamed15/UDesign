@@ -90,3 +90,9 @@
 </div>
   </div>
 </div>
+<div *ngIf="interiors">
+    <div *ngFor = "let interior of interiors['interiorOffices']">
+        <p>{{interior['interior_body'] }}</p>
+      </div>
+
+</div>

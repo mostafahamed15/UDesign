@@ -8,11 +8,11 @@ import {InteriorService} from '../../services/interior.service'
 export class InteriorComponent implements OnInit {
 
   images: Array<string>;
-  slides:any;
+  interiors:any;
   constructor(public InteriorService:InteriorService ) {
     this.InteriorService.get().subscribe((res)=>{
-      this.slides = res['data']; 
-      console.log(this.slides)
+      this.interiors = res['data']; 
+      console.log(this.interiors)
      });
 
    }

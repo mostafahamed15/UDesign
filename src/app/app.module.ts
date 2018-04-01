@@ -30,9 +30,10 @@ import {PostsService} from './services/post.service';
 import {ProductService} from './services/product.service';
 import { SlickModule } from 'ngx-slick';
 import {AdsService} from './services/ads.service';
+import { PackageService } from './services/package.service';
 
 import { CookieService } from 'ngx-cookie-service';
-
+import { FinishingService } from './services/finishing.service'
 //my guards
 import { AuthGuard} from './guards/auth';
 import { HomeComponent } from './pages/home/home.component';
@@ -52,6 +53,7 @@ import { SigninComponent } from './components/header/signin/signin.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AdvertisementsComponent } from './components/advertisements/advertisements.component';
 import { InteriorService } from './services/interior.service';
+import { PackageComponent } from './components/package/package.component';
 
 
 const ROUTES: Routes = [
@@ -96,6 +98,7 @@ const ROUTES: Routes = [
     SigninComponent,
     BrandsComponent,
     AdvertisementsComponent,
+    PackageComponent,
     
   
   
@@ -135,7 +138,9 @@ const ROUTES: Routes = [
     PostsService,
     ProductService,
     AdsService,
-    InteriorService
+    InteriorService,
+    FinishingService,
+    PackageService
 
 
   ],

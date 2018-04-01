@@ -230,3 +230,8 @@
 </div>
   </div>
 </div>
+<div *ngIf = "finishingOfice">
+  <div *ngFor = "let office of finishingOfice['finishingOffices']">
+    <img src="{{office['image']}}" alt = "{{office['name']}}">
+  </div>
+</div>
