@@ -51,6 +51,7 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { SigninComponent } from './components/header/signin/signin.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { AdvertisementsComponent } from './components/advertisements/advertisements.component';
+import { InteriorService } from './services/interior.service';
 
 
 const ROUTES: Routes = [
@@ -133,7 +134,8 @@ const ROUTES: Routes = [
     CommonService,
     PostsService,
     ProductService,
-    AdsService
+    AdsService,
+    InteriorService
 
 
   ],

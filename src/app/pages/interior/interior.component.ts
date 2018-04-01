@@ -7,7 +7,15 @@ import {InteriorService} from '../../services/interior.service'
 })
 export class InteriorComponent implements OnInit {
 
-  constructor() { }
+  images: Array<string>;
+  slides:any;
+  constructor(public InteriorService:InteriorService ) {
+    this.InteriorService.get().subscribe((res)=>{
+      this.slides = res['data']; 
+      console.log(this.slides)
+     });
+
+   }
 
   ngOnInit() {
   }
