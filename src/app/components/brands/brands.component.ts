@@ -5,6 +5,7 @@ import { SlickModule } from 'ngx-slick';
 
 
 
+
 @Component({
   selector: 'app-brands',
   templateUrl: './brands.component.html',
@@ -16,7 +17,7 @@ export class BrandsComponent {
   public title:string=null
   private last:number = 0;
   private hasMore:boolean = true;
-    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
+    slideConfig = {'slidesToShow': 6, 'slidesToScroll': 1};
 
 
   constructor( public  brandService: BrandService) {

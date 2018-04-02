@@ -7,7 +7,10 @@ import { RouterModule ,Routes } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient} from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
-import {HeaderComponent} from './components/header/header.component'
+import {HeaderComponent} from './components/header/header.component';
+import {AccordionModule} from 'primeng/accordion';     
+import {MenuItem} from 'primeng/api'; 
+import {CarouselModule} from 'primeng/carousel';
 
 //components
 import { AppComponent } from './app.component';
@@ -114,6 +117,7 @@ const ROUTES: Routes = [
     ReactiveFormsModule,
     NgbModule,
     SlickModule.forRoot(),
+    CarouselModule,
     
     
     TranslateModule.forRoot({
