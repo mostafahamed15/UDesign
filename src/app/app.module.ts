@@ -33,7 +33,8 @@ import {AdsService} from './services/ads.service';
 import { PackageService } from './services/package.service';
 
 import { CookieService } from 'ngx-cookie-service';
-import { FinishingService } from './services/finishing.service'
+import { FinishingService } from './services/finishing.service';
+import { UserService } from './services/user.service'
 //my guards
 import { AuthGuard} from './guards/auth';
 import { HomeComponent } from './pages/home/home.component';
@@ -59,7 +60,7 @@ import { PackageComponent } from './components/package/package.component';
 const ROUTES: Routes = [
   // {path:'signup',component:SignupComponent},
   // {path:'forgot-passowrd',component:ForgotPasswordComponent},
-  // {path:'login',component:SigninComponent},
+   //{path:'login',component:SigninComponent},
   // {path:'showdetails/:id',component:DetailsComponent},
   {path:'',component:HomeComponent},
      {path:'home',component:HomeComponent},
@@ -140,14 +141,17 @@ const ROUTES: Routes = [
     AdsService,
     InteriorService,
     FinishingService,
-    PackageService
+    PackageService,
+    UserService
 
 
   ],
   entryComponents:[
     HeaderComponent,
+    
    
-    AppComponent ],
+    AppComponent,
+    SigninComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

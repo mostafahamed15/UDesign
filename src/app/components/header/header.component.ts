@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../../services/auth.service';
+import { SigninComponent } from './signin/signin.component';
 
 
 @Component({
@@ -16,9 +17,13 @@ export class HeaderComponent implements OnInit {
   constructor(public router:Router,
 		public modalService: NgbModal,
 		public cookieService: CookieService,
-		public auth: AuthService) { }
+		public auth: AuthService,) { }
 
   ngOnInit() {
   }
 
+  open() {
+    const modalRef = this.modalService.open(SigninComponent);
+    modalRef.componentInstance.name = 'World';
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service'
 
 @Component({
   selector: 'app-profile-page',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-page.component.css']
 })
 export class ProfilePageComponent implements OnInit {
+user: any;
+  constructor(public UserService: UserService) { 
+    this.UserService.getLikes().subscribe((res)=>{
+      this.user = res['data'];
+      console.log(this.user);
+    })
+  }
 
-  constructor() { }
 
   ngOnInit() {
   }

@@ -1,0 +1,9 @@
+.modal-content{
+    z-index: 99999999;
+    position: fixed;
+  top: 215px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 250px;
+      }
