@@ -62,6 +62,7 @@ import { BrandPageComponent } from './pages/brand-page/brand-page.component';
 import { BrandFeaturesComponent } from './components/brand-features/brand-features.component';
 import { AboutBrandComponent } from './components/about-brand/about-brand.component';
 import { BrandSallesOfComponent } from './components/brand-salles-of/brand-salles-of.component';
+import { BrandByCategoryComponent } from './components/brand-by-category/brand-by-category.component';
 
 
 const ROUTES: Routes = [
@@ -112,6 +113,7 @@ const ROUTES: Routes = [
     BrandFeaturesComponent,
     AboutBrandComponent,
     BrandSallesOfComponent,
+    BrandByCategoryComponent,
     
   
   
