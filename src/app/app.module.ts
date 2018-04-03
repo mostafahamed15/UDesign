@@ -60,6 +60,7 @@ import { InteriorService } from './services/interior.service';
 import { PackageComponent } from './components/package/package.component';
 import { BrandPageComponent } from './pages/brand-page/brand-page.component';
 import { BrandFeaturesComponent } from './components/brand-features/brand-features.component';
+import { AboutBrandComponent } from './components/about-brand/about-brand.component';
 
 
 const ROUTES: Routes = [
@@ -108,6 +109,7 @@ const ROUTES: Routes = [
     PackageComponent,
     BrandPageComponent,
     BrandFeaturesComponent,
+    AboutBrandComponent,
     
   
   
