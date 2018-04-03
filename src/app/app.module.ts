@@ -58,6 +58,7 @@ import { BrandsComponent } from './components/brands/brands.component';
 import { AdvertisementsComponent } from './components/advertisements/advertisements.component';
 import { InteriorService } from './services/interior.service';
 import { PackageComponent } from './components/package/package.component';
+import { BrandPageComponent } from './pages/brand-page/brand-page.component';
 
 
 const ROUTES: Routes = [
@@ -67,6 +68,7 @@ const ROUTES: Routes = [
   // {path:'showdetails/:id',component:DetailsComponent},
   {path:'',component:HomeComponent},
      {path:'home',component:HomeComponent},
+     {path:'brandPage',component:BrandPageComponent},
 
   {path:'profile',component: ProfilePageComponent},
   // {path:'checkout',component: CartComponent},
@@ -103,6 +105,7 @@ const ROUTES: Routes = [
     BrandsComponent,
     AdvertisementsComponent,
     PackageComponent,
+    BrandPageComponent,
     
   
   

@@ -15,7 +15,7 @@
  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" style="padding-bottom: 40px;">
   
     <div ngxSlickItem *ngFor="let brand of brands" class="slide">
-        <a href = "#"><img style="color:black; height: 200px;width: 100%" class="img-responsive"  src="{{ brand['xbrand_logo'] }}" alt="{{brand['brand_image']}}" ></a>
+        <a href = "/brandPage"><img style="color:black; height: 200px;width: 100%" class="img-responsive"  src="{{ brand['xbrand_logo'] }}" alt="{{brand['brand_image']}}" ></a>
   </div>
 </ngx-slick>
 </div>

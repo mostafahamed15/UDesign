@@ -1,9 +1,11 @@
 .brands{
     color: black !important;
     text-align: center !important;
+    
 }
 div{
     background-color: white;
+    margin-bottom: 40px;
 }
 .slide{
     border: 1px solid black;
