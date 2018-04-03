@@ -59,6 +59,7 @@ import { AdvertisementsComponent } from './components/advertisements/advertiseme
 import { InteriorService } from './services/interior.service';
 import { PackageComponent } from './components/package/package.component';
 import { BrandPageComponent } from './pages/brand-page/brand-page.component';
+import { BrandFeaturesComponent } from './components/brand-features/brand-features.component';
 
 
 const ROUTES: Routes = [
@@ -106,6 +107,7 @@ const ROUTES: Routes = [
     AdvertisementsComponent,
     PackageComponent,
     BrandPageComponent,
+    BrandFeaturesComponent,
     
   
   
