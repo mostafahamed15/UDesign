@@ -63,10 +63,11 @@ import { BrandFeaturesComponent } from './components/brand-features/brand-featur
 import { AboutBrandComponent } from './components/about-brand/about-brand.component';
 import { BrandSallesOfComponent } from './components/brand-salles-of/brand-salles-of.component';
 import { BrandByCategoryComponent } from './components/brand-by-category/brand-by-category.component';
+import { SignupComponent } from './components/header/signup/signup.component';
 
 
 const ROUTES: Routes = [
-  // {path:'signup',component:SignupComponent},
+   //{path:'signup',component:SignupComponent},
   // {path:'forgot-passowrd',component:ForgotPasswordComponent},
    //{path:'login',component:SigninComponent},
   // {path:'showdetails/:id',component:DetailsComponent},
@@ -114,6 +115,7 @@ const ROUTES: Routes = [
     AboutBrandComponent,
     BrandSallesOfComponent,
     BrandByCategoryComponent,
+    SignupComponent,
     
   
   

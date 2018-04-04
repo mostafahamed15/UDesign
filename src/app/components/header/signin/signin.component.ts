@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
+import {SignupComponent } from '../signup/signup.component'
 
 
 
@@ -17,6 +18,7 @@ import 'rxjs/add/operator/map';
 })
 export class SigninComponent {
   
+  show: boolean = true;
 
   public alerts: Array<IAlert> = [];
 
@@ -51,9 +53,12 @@ activation_code:''
               private formBuilder: FormBuilder,
               private authService: AuthService,
               public cookieService: CookieService,
+              public router:Router,
+		public modalService: NgbModal,
+		public auth: AuthService,
   ) { 
 
-
+    
     this.creds = this.formBuilder.group({
       email: ['', [Validators.required,Validators.email]],
       password: ['',[Validators.required,Validators.minLength(6)]],
@@ -95,6 +100,10 @@ activation_code:''
         );
             this.backup = this.alerts.map((alert: IAlert) => Object.assign({}, alert));
             this.errormessage = this.alerts['message']
+        }
+        openSignUp() {
+          const modalRef = this.modalService.open(SignupComponent);
+          modalRef.componentInstance.name = 'World';
         }
     }
     
