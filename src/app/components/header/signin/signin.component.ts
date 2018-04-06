@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
-import {SignupComponent } from '../signup/signup.component'
+
 
 
 
@@ -25,29 +25,23 @@ export class SigninComponent {
 private backup: Array<IAlert> = [];
 public creds: FormGroup;
 morefalse=true;
-public vendorsignup: FormGroup;
+public signupuser: FormGroup;
 public errors:object = {
 name:'',
 email:'',
 phone:'',
 password:'',
 password_confirmation:'',
+
 };
 public loginErrors:loginErrors = {
 message:null
 };
 
-public activate:boolean = true;
-public submitting:boolean = false;
 public message: Array<any>;
-public status:number = 1;
 public email:any;
 public errormessage:any;
 public form:FormGroup;
-public title:any = 'Activate Your Account';
-public error:object = {
-activation_code:''
-}
 
   constructor(public activeModal: NgbActiveModal,
               private formBuilder: FormBuilder,
@@ -57,26 +51,42 @@ activation_code:''
 		public modalService: NgbModal,
 		public auth: AuthService,
   ) { 
-
+    
     
     this.creds = this.formBuilder.group({
       email: ['', [Validators.required,Validators.email]],
       password: ['',[Validators.required,Validators.minLength(6)]],
       });
+
+
+      this.signupuser = this.formBuilder.group({
+        name: ['', [Validators.required]],
+        email: ['', [Validators.required,Validators.email]],
+        password: ['',[Validators.required,Validators.minLength(6)]],
+        c_password: ['',[Validators.required]],
+        phone: ['', [Validators.required]],
+        code: ['', []],
+
+        });
       }
-      
+  signup(){
+    console.log(this.alerts)
+        this.authService.signup(this.signupuser.value).subscribe((res)=>{
+          console.log(this.signupuser.value)
+
+  });}
+
+
+        
       login(){
         console.log(this.alerts)
-        this.submitting = true;
         this.authService.signin(this.creds.value).subscribe((res)=>{
           console.log(this.creds.value)
-        this.submitting =false;
-        this.cookieService.set('token',res['data'].api_token);
+        this.cookieService.set('token',res['success'].token);
         this.cookieService.set('lang','en');
-        this.cookieService.set('user-profile',JSON.stringify(res['data']));
+        this.cookieService.set('user',JSON.stringify(res['user']));
         this.activeModal.close();
         console.log(res);},(err)=>{
-        this.submitting = false;
         if(err.status == 401){
         if(parseInt(err['error'].code) === 1){
         this.loginErrors['message'] = 'Incorrect username or password'
@@ -101,10 +111,7 @@ activation_code:''
             this.backup = this.alerts.map((alert: IAlert) => Object.assign({}, alert));
             this.errormessage = this.alerts['message']
         }
-        openSignUp() {
-          const modalRef = this.modalService.open(SignupComponent);
-          modalRef.componentInstance.name = 'World';
-        }
+        
     }
     
     
