@@ -14,11 +14,22 @@ import { SigninComponent } from './signin/signin.component';
 })
 export class HeaderComponent implements OnInit {
   public isLogged:boolean=false;
-	public UserInfo = {};
+  public UserInfo = {};
+  public userName;
   constructor(public router:Router,
 		public modalService: NgbModal,
 		public cookieService: CookieService,
-		public auth: AuthService,) { }
+		public auth: AuthService,) {
+      this.UserInfo = this.cookieService.get('token');
+
+      if (this.UserInfo){
+        this.userName = this.cookieService.get('user');
+
+        this.userName = JSON.parse(this.userName)
+        console.log (this.userName);
+      }
+    
+     }
 
   ngOnInit() {
   }
@@ -26,6 +37,9 @@ export class HeaderComponent implements OnInit {
   open() {
     const modalRef = this.modalService.open(SigninComponent);
     modalRef.componentInstance.name = 'World';
+  }
+  logout(){
+   this.cookieService.deleteAll();
   }
   
 }

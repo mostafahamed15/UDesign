@@ -6,13 +6,35 @@
           </div>
          <button>Follow</button>
          <div class="user-profile-data">
-           <h1>Adam Samer</h1>
+           <h1>{{userinfo['name']}}</h1>
 <!--             <p>github.com/jofpin</p>
 -->          </div> 
          <div class="description-profile">I love udesign </div>
-      <ul class="data-user">
-       <li><a><strong>10</strong><span>Wishes</span></a></li>
-       <li><a><strong>13</strong><span>Likes</span></a></li>
-      </ul>
+      
+         <ngb-tabset>
+          <ngb-tab title="likes" >
+            <ng-template ngbTabContent>
+              <div *ngIf="likes">
+              <div  *ngFor = "let like of likes">
+                <img width="80px" src="{{like.product.xfeatured_image}}">
+              <p>{{like.product.name}}</p>
+            </div>
+          </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle><b>Wiches</b> </ng-template>
+            <ng-template ngbTabContent>
+                <div *ngIf="wishes">
+                    <div  *ngFor = "let wish of wishes">
+                      <img width="80px" src="{{wish.product.xfeatured_image}}">
+                    <p>{{wish.product.name}}</p>
+                  </div>
+            </ng-template>
+          </ngb-tab>
+         
+        </ngb-tabset>
+      
      </div>
    </div>
+   

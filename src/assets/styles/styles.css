@@ -11610,7 +11610,7 @@ body {
 .dropdown-menu {
   opacity: 0;
   left: 0;
-  visibility: hidden;
+  
   border-radius: 0;
   transform-origin: top;
   animation-fill-mode: forwards;
@@ -19452,3 +19452,6 @@ footer .bottom-footer .list-payment li a:active:before {
 /* .modal-content{
   z-index: 99999999;
 } */
+.dropdown-menu.show{
+  opacity: 1;
+}

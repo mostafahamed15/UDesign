@@ -41,10 +41,27 @@
                                 </div>
                                 <!-- /.search-form -->
                             </li>
-                            <li>
+                            <li *ngIf = "!UserInfo; else user">
                                     
                                 <button (click)="open()" type="button"  class="btn btn-primary sign-in"><a >Log in</a> </button>
                             </li>
+                            <ng-template #user>
+                            <li style="float: right;">
+
+                                <div class="row">
+                                    <div class="col">
+                                      <div ngbDropdown class="d-inline-block">
+                                        <img width="20px" id="dropdownBasic1" ngbDropdownToggle src = "assets/images/user.png" alt="user pic">
+                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                          <button class="dropdown-item">{{userName['name']}}</button>
+                                          <hr>
+                                          <button class="dropdown-item" (click) = "logout()">log out</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                            </li>
+                        </ng-template>
                         </ul>
                     </div>
                     <!-- /.minimal-menu -->
