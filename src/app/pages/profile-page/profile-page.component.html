@@ -27,8 +27,9 @@
             <ng-template ngbTabContent>
                 <div *ngIf="wishes">
                     <div  *ngFor = "let wish of wishes">
-                      <img width="80px" src="{{wish.product.xfeatured_image}}">
+                      <img width="80px" src="{{wish.product.xfeatured_image}}"/>
                     <p>{{wish.product.name}}</p>
+                  </div>
                   </div>
             </ng-template>
           </ngb-tab>
