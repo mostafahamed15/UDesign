@@ -153,3 +153,9 @@ footer h4 a {
   text-decoration: none;
   color: #3498db;
 }
+.group-buttons{
+  text-align: center !important;
+}
+.box-product{
+  width: 100%;
+}
