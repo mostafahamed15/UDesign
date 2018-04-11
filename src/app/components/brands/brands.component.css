@@ -1,4 +1,4 @@
-.brands{
+/* .brands{
     color: black !important;
     text-align: center !important;
     
@@ -17,4 +17,12 @@ div{
 }
 .xyz{
     color: whitesmoke
+} */
+.category-item{
+   
+    border-radius: 50%;
+}
+.shop-by-categories{
+    padding-top: 20px;
+    background: #c4c4c438;
 }

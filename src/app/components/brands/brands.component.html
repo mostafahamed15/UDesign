@@ -10,7 +10,7 @@
 
 
  -->
- <div>
+ <!-- <div>
      <h1 class="brands">Brands</h1>
  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" style="padding-bottom: 40px;">
   
@@ -18,7 +18,7 @@
         <a href = "/brandPage"><img style="color:black; height: 200px;width: 100%" class="img-responsive"  src="{{ brand['xbrand_logo'] }}" alt="{{brand['brand_image']}}" ></a>
   </div>
 </ngx-slick>
-</div>
+</div> -->
 <!-- <p-carousel [value]="brand">
         <ng-template let-brand pTemplate="item">
            
@@ -30,3 +30,31 @@
         </ng-template>
     </p-carousel>
      -->
+     <div class="shop-by-categories">
+     <div class="container">
+            <h3>Brands</h3>
+     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let brand of brands" class="slide" >
+                    <div class="box-content">
+                        <div class="category-item">
+                            <div class="category-thumb">
+                                <div  class="main-img">
+                                    <a href="/brandPage">
+                                        <img style ="width: 230px; height:160px;"  class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
+                                    </a>
+                                </div>
+                                <div class="overlay-img">
+                                    <a href="/brandPage">
+                                        <img style ="width: 230px; height:160px;" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
+                                    </a>
+                                </div>
+                            </div>
+                           
+                        </div>
+ <h4 style="text-align: center; "><a href="/brandPage">{{brand['brand_name']}}</a></h4>
+        </div>
+    </div>
+    </ngx-slick>
+</div>
+</div>
+
