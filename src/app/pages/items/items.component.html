@@ -203,14 +203,14 @@
                       <div *ngFor="let product of products" class="col-md-4 col-sm-6">
                           <div class="product-item">
                               <div class="product-thumb">
-                                  <div class="main-img">
+                                  <div class="main-img" style="width: 200px; height: 150px">
                                       <a href="single-product.html">
-                                          <img class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
+                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
                                       <a href="single-product.html">
-                                          <img class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
+                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
                                   <a href="/product/{{product['id']}}" class="details"><i class="pe-7s-search"></i></a>
