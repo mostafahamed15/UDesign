@@ -20,16 +20,18 @@ public wishes:any[] = [];
     this.userService.getLikes().subscribe((res:any[])=>{
       this.likes = res;
       
-      console.log(this.likes)
+      // console.log(this.likes)
     });
     this.userService.getWishList().subscribe((res:any[])=>{
       this.wishes = res;
       
-      console.log(this.wishes)
+      // console.log(this.wishes)
   	});
     
     if (this.cookieinfo){ 
       this.userinfo = JSON.parse(this.userinfo)
+
+      console.log(this.userinfo)
     }
 
   }
