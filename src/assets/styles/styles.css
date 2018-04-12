@@ -19459,3 +19459,7 @@ footer .bottom-footer .list-payment li a:active:before {
 .slick-next:before {
   color: #3fc0eb !important;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: purple !important;
+  background: transparent !important;
+}

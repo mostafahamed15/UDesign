@@ -9,7 +9,7 @@ import { PackageService } from '../../services/package.service'
 export class PackageComponent implements OnInit {
 packages: any;
   constructor(public packageService: PackageService) { 
-    this.packageService.get("data").subscribe((res)=>{
+    this.packageService.get({}).subscribe((res)=>{
       this.packages = res['data'];
       console.log(this.packages)
    })

@@ -1,65 +1,33 @@
-<div class="trending-clothing">
-        <div class="container">
-            <h3>TRENDY CLOTHING</h3>
-            <h5>Trending</h5>
-            <div id="carousel-1">
-                <div class="tab-heading">
-                    <span>Top Categories</span>
-                    <span>Products</span>
-                    <span>Top Packages</span>
-                </div>
-                <div class="box-content">
-                    <div class="showcase">
-                        <div class="row">
-                          <div class="box-product">
-                            <div class="col-lg-12 col-md-6 col-sm-6">
-                                <div class="product-item col-lg-4">
-                                    <div class="product-thumb">
-                                        <div class="main-img" style="width:100%">
-                                            <a href="single-product.html">
-                                                <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
-                                            </a>
-                                        </div>
-                                        <div class="overlay-img" style="width:100%">
-                                            <a href="single-product.html">
-                                                <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
-                                            </a>
-                                        </div>
-                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                    </div>
-                                    <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
-                                    <p class="product-price">
-                                    189.99 USD
-                                    </p>
-                                    <div class="group-buttons">
-                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                        <span>Add to Cart</span>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                        <i class="pe-7s-repeat"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                        <i class="pe-7s-like"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-item col-lg-4">
+      <ngb-tabset>
+            <ngb-tab title="Top Categories">
+              <ng-template ngbTabContent>
+               <div class="sale-off">
+  <div class="container">
+      <div id="carousel-2">
+          <div class="box-content">
+              <div class="showcase">
+                  <div class="row">
+                      <div class="box-product">
+                          <div class="col-lg-12 col-md-4 col-sm-6">
+                              <div class="product-item" *ngFor = "let categor of category['categories']" >
                                   <div class="product-thumb">
-                                      <div class="main-img" style="width:100%">
+                                      <div class="main-img">
                                           <a href="single-product.html">
-                                              <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
+                                              <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{categor['xfeatured_image']}}" alt="img" />
                                           </a>
                                       </div>
-                                      <div class="overlay-img" style="width:100%">
+                                      <div class="overlay-img">
                                           <a href="single-product.html">
-                                              <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
+                                              <img style = " width: 300px; height:200px;" class="img-responsive" src="{{categor['xfeatured_image']}}" alt="img" />
                                           </a>
                                       </div>
+                                      
                                       <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
                                   </div>
-                                  <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
+                                  <h4 class="product-name"><a href="single-product.html">{{categor['name']}}</a></h4>
                                   <p class="product-price">
-                                  189.99 USD
+                                  <ins><span class="amount">{{categor['lowest-price']}}</span></ins>
+                                  <del><span class="amount">{{categor['lowest-price']}}</span></del>
                                   </p>
                                   <div class="group-buttons">
                                       <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
@@ -73,575 +41,137 @@
                                       </button>
                                   </div>
                               </div>
-                              <div class="product-item col-lg-4">
-                                <div class="product-thumb">
-                                    <div class="main-img" style="width:100%">
-                                        <a href="single-product.html">
-                                            <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
-                                        </a>
-                                    </div>
-                                    <div class="overlay-img" style="width:100%">
-                                        <a href="single-product.html">
-                                            <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
-                                        </a>
-                                    </div>
-                                    <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                </div>
-                                <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
-                                <p class="product-price">
-                                189.99 USD
-                                </p>
-                                <div class="group-buttons">
-                                    <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                    <span>Add to Cart</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                    <i class="pe-7s-repeat"></i>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                    <i class="pe-7s-like"></i>
-                                    </button>
-                                </div>
-                            </div>
-                             
-                            </div>
-                          </div>
-                            </div>
-                            
-                          </div>
                           
-                          </div>
-                          </div>
-                                <!-- <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item has-deal">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="countdown" data-time="2015/09/06"></div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">COAT WITH WOOL WRAPAROUND COLLAR</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item has-deal">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="countdown" data-time="2015/09/06"></div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">UTILITY JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">ANIMAL PRINT COAT</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showcase">
-                        <div class="row">
-                            <div class="box-product">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-new">
-                                                NEW
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">COAT WITH WOOL WRAPAROUND COLLAR</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html#">
-                                                    <img class="img-responsive" src="assets/images/product-img-3-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">UTILITY JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">ANIMAL PRINT COAT</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showcase">
-                        <div class="row">
-                            <div class="box-product">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">UTILITY JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-new">
-                                                NEW
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">COAT WITH WOOL WRAPAROUND COLLAR</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">ANIMAL PRINT COAT</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showcase">
-                        <div class="row">
-                            <div class="box-product">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-4-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">ANIMAL PRINT COAT</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-1-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">HANDMADE FLARED JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-2-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-new">
-                                                NEW
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">COAT WITH WOOL WRAPAROUND COLLAR</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-3-thumb.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">UTILITY JACKET</a></h4>
-                                        <p class="product-price">
-                                        189.99 USD
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div> -->
-      
+                          
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                 
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Products">
+              <ng-template ngbTabContent>
+                    <div class="sale-off">
+                            <div class="container">
+                                <div id="carousel-2">
+                                    <div class="box-content">
+                                        <div class="showcase">
+                                            <div class="row">
+                                                <div class="box-product">
+                                                    <div class="col-lg-12 col-md-4 col-sm-6">
+                                                        <div class="product-item" *ngFor = 'let product of products["top"]' >
+                                                            <div class="product-thumb">
+                                                                <div class="main-img">
+                                                                    <a href="single-product.html">
+                                                                        <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="overlay-img">
+                                                                    <a href="single-product.html">
+                                                                        <img style = " width: 300px; height:200px;" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
+                                                                    </a>
+                                                                </div>
+                                                                
+                                                                <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                                            </div>
+                                                            <h4 class="product-name"><a href="single-product.html">{{product['name']}}</a></h4>
+                                                            <p class="product-price">
+                                                            <ins><span class="amount">{{product['lowest-price']}}</span></ins>
+                                                            <del><span class="amount">{{product['lowest-price']}}</span></del>
+                                                            </p>
+                                                            <div class="group-buttons">
+                                                                <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                <span>Add to Cart</span>
+                                                                </button>
+                                                                <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                                                <i class="pe-7s-repeat"></i>
+                                                                </button>
+                                                                <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                                <i class="pe-7s-like"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                         
+                          
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Top Packages">
+                    <ng-template ngbTabContent>
+                            <div class="sale-off">
+                                    <div class="container">
+                                        <div id="carousel-2">
+                                            <div class="box-content">
+                                                <div class="showcase">
+                                                    <div class="row">
+                                                        <div class="box-product">
+                                                            <div class="col-lg-12 col-md-4 col-sm-6">
+                                                                <div class="product-item" *ngFor = "let packag of package['top']" >
+                                                                    <div class="product-thumb">
+                                                                        <div class="main-img">
+                                                                            <a href="single-product.html">
+                                                                                <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{packag['xfeatured_image']}}" alt="img" />
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="overlay-img">
+                                                                            <a href="single-product.html">
+                                                                                <img style = " width: 300px; height:200px;" class="img-responsive" src="{{packag['xfeatured_image']}}" alt="img" />
+                                                                            </a>
+                                                                        </div>
+                                                                        
+                                                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                                                    </div>
+                                                                    <h4 class="product-name"><a href="single-product.html">{{packag['name']}}</a></h4>
+                                                                    <p class="product-price">
+                                                                    <ins><span class="amount">{{packag['lowest-price']}}</span></ins>
+                                                                    <del><span class="amount">{{packag['lowest-price']}}</span></del>
+                                                                    </p>
+                                                                    <div class="group-buttons">
+                                                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                        <span>Add to Cart</span>
+                                                                        </button>
+                                                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                                                        <i class="pe-7s-repeat"></i>
+                                                                        </button>
+                                                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                                        <i class="pe-7s-like"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                            
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                 
+                                  
+                    </ng-template>
+                  </ngb-tab>
+          </ngb-tabset>
+
+
+          

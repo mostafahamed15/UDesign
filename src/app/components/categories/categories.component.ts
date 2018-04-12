@@ -8,7 +8,10 @@ import { SlickModule } from 'ngx-slick';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  public topp:TopCatsResponse;    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
+  public topp:TopCatsResponse = {
+    topp:[],
+    base_url:null
+  };    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
   constructor(public categoryService:CategoryService) { 
     this.categoryService.getTop().subscribe(res => {
       this.topp = res['data']
