@@ -85,7 +85,7 @@ const ROUTES: Routes = [
    {path:'interior',component: InteriorComponent},
    {path:'finishing',component: FinishingComponent},
   {path:'news',component: LatestnewsComponent},
-  // {path:'singlepost',component: SinglepostComponent},
+  //{path:'singlepost',component: SinglepostComponent},
   {path:'contact',component: ContactusComponent},
   // {path:'product/:id',component: SingleproductComponent},
 

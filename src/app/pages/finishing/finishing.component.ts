@@ -7,16 +7,20 @@ import { FinishingService } from '../../services/finishing.service';
   styleUrls: ['./finishing.component.css']
 })
 export class FinishingComponent implements OnInit {
-  finishingOfice: any;
+  finishingOfice: finishingOficeResponse;
 
   constructor(public finishing: FinishingService) {
     this.finishing.get().subscribe((res)=>{
        this.finishingOfice = res['data'];
-       console.log(this.finishingOfice)
+       console.log(this.finishingOfice);
     })
    }
 
   ngOnInit() {
   }
 
+}
+interface finishingOficeResponse{
+  finishingOfices:any[];
+  
 }

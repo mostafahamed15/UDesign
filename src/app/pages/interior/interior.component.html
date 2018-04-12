@@ -1,69 +1,15 @@
-<div class="about-block">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-3 col-xs-6">
-              <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-          </div>
-          <div class="col-md-3 col-xs-6">
-              <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-          </div>
-          <div class="col-md-6 col-sm-12">
-              <h3>ABOUT Brand</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-              <a class="content-link" href="/interiorOffice">LOCATION</a>
-          </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-xs-6">
+<div class="container">
+    <div class="row" *ngFor = " let interior of interiors['interiorOffices']">
+        <div class="col-md-6 col-xs-6">
             <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
         </div>
-        <div class="col-md-3 col-xs-6">
-            <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-        </div>
+        
         <div class="col-md-6 col-sm-12">
-            <h3>ABOUT Brand</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-            <a class="content-link" href="/interiorOffice">LOCATION</a>
+            <h3>{{interior['interior_body']}}</h3>
+            <p>{{interior['interior_body']}}</p>
+            <p>{{interior['interior_body']}}</p>
+            <a class="content-link" href="/finishingOffice">Show</a>
         </div>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-xs-6">
-          <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-      </div>
-      <div class="col-md-3 col-xs-6">
-          <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-      </div>
-      <div class="col-md-6 col-sm-12">
-          <h3>ABOUT Brand</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-          <a class="content-link" href="/interiorOffice">LOCATION</a>
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 col-xs-6">
-        <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-    </div>
-    <div class="col-md-3 col-xs-6">
-        <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <h3>ABOUT Brand</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-        <a class="content-link" href="/interiorOffice">LOCATION</a>
-    </div>
-</div>
-<div class="row">
-  <div class="col-md-3 col-xs-6">
-      <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-  </div>
-  <div class="col-md-3 col-xs-6">
-      <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-  </div>
-  <div class="col-md-6 col-sm-12">
-      <h3>ABOUT Brand</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-      <a class="content-link" href="/interiorOffice">LOCATION</a>
-  </div>
-</div>
-  </div>            
-</div>
+   
+</div>   

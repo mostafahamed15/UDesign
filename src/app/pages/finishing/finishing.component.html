@@ -1,69 +1,16 @@
-<div class="about-block">
+
   <div class="container">
-      <div class="row">
-          <div class="col-md-3 col-xs-6">
-              <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
+      <div class="row" *ngFor = " let office of finishingOfice['finishingOffices']">
+          <div class="col-md-6 col-xs-6">
+              <img class="img-responsive" src="{{office['ximage']}}" alt="img" />
           </div>
-          <div class="col-md-3 col-xs-6">
-              <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-          </div>
+          
           <div class="col-md-6 col-sm-12">
-              <h3>ABOUT Brand</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-              <a class="content-link" href="/finishingOffice">LOCATION</a>
+              <h3>{{office['name']}}</h3>
+              <p>{{office['body']}}</p>
+              <p>{{office['price_per_hour']}}</p>
+              <a class="content-link" href="/finishingOffice">Show</a>
           </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 col-xs-6">
-            <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-        </div>
-        <div class="col-md-3 col-xs-6">
-            <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-        </div>
-        <div class="col-md-6 col-sm-12">
-            <h3>ABOUT Brand</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-            <a class="content-link" href="/finishingOffice">LOCATION</a>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-xs-6">
-          <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-      </div>
-      <div class="col-md-3 col-xs-6">
-          <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-      </div>
-      <div class="col-md-6 col-sm-12">
-          <h3>ABOUT Brand</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-          <a class="content-link" href="/finishingOffice">LOCATION</a>
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 col-xs-6">
-        <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-    </div>
-    <div class="col-md-3 col-xs-6">
-        <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <h3>ABOUT Brand</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-        <a class="content-link" href="/finishingOffice">LOCATION</a>
-    </div>
-</div>
-<div class="row">
-  <div class="col-md-3 col-xs-6">
-      <img class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-  </div>
-  <div class="col-md-3 col-xs-6">
-      <img class="img-responsive" src="assets/images/banner2.jpg" alt="img" />
-  </div>
-  <div class="col-md-6 col-sm-12">
-      <h3>ABOUT Brand</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus mauris. Fusce ultrices in orci ac rhoncus. Duis dictum tempus neque, eu bibendum nibh viverra quis. Etiam sagittis ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada volutpat. Quisque molestie condimentum purus at rhoncus. Donec faucibus condimentum erat, ut varius orci ultricies vitae. Nam viverra diam diam, at egestas tellus interdum condimentum.</p>
-      <a class="content-link" href="/finishingOffice">LOCATION</a>
-  </div>
-</div>
+     
   </div>            
-</div>
