@@ -1,129 +1,177 @@
-<div class="custom-blocks">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="block-item">
-                    <a><h3>NEW-IN</h3></a>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-6">
-                            <div class="media">
-                                <div class="media-left">
-                                    <div class="block-thumb">
-                                        <div style=" width:110; height:130" class="main-img">
-                                            <a href="single-product.html">
-                                                <img width="110" height="130" class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-                                            </a>
+<ngb-tabset>
+    <ngb-tab title="NEW IN">
+      <ng-template ngbTabContent>
+       <div class="sale-off">
+<div class="container">
+<div id="carousel-2">
+  <div class="box-content">
+      <div class="showcase">
+          <div class="row">
+              <div class="box-product">
+                  <div class="col-lg-12 col-md-4 col-sm-6">
+                      <div class="product-item" *ngFor = "let categor of category['categories']" >
+                          <div class="product-thumb">
+                              <div class="main-img">
+                                  <a href="single-product.html">
+                                      <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{categor['xfeatured_image']}}" alt="img" />
+                                  </a>
+                              </div>
+                              <div class="overlay-img">
+                                  <a href="single-product.html">
+                                      <img style = " width: 300px; height:200px;" class="img-responsive" src="{{categor['xfeatured_image']}}" alt="img" />
+                                  </a>
+                              </div>
+                              
+                              <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                          </div>
+                          <h4 class="product-name"><a href="single-product.html">{{categor['name']}}</a></h4>
+                          <p class="product-price">
+                          <ins><span class="amount">{{categor['lowest-price']}}</span></ins>
+                          <del><span class="amount">{{categor['lowest-price']}}</span></del>
+                          </p>
+                          <div class="group-buttons">
+                              <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                              <span>Add to Cart</span>
+                              </button>
+                              <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                              <i class="pe-7s-repeat"></i>
+                              </button>
+                              <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                              <i class="pe-7s-like"></i>
+                              </button>
+                          </div>
+                      </div>
+                  
+                  
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              
+              
+              
+              
+              
+         
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="FEATURED">
+      <ng-template ngbTabContent>
+            <div class="sale-off">
+                    <div class="container">
+                        <div id="carousel-2">
+                            <div class="box-content">
+                                <div class="showcase">
+                                    <div class="row">
+                                        <div class="box-product">
+                                            <div class="col-lg-12 col-md-4 col-sm-6">
+                                                <div class="product-item" *ngFor = 'let product of products["top"]' >
+                                                    <div class="product-thumb">
+                                                        <div class="main-img">
+                                                            <a href="single-product.html">
+                                                                <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="overlay-img">
+                                                            <a href="single-product.html">
+                                                                <img style = " width: 300px; height:200px;" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
+                                                            </a>
+                                                        </div>
+                                                        
+                                                        <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                                    </div>
+                                                    <h4 class="product-name"><a href="single-product.html">{{product['name']}}</a></h4>
+                                                    <p class="product-price">
+                                                    <ins><span class="amount">{{product['lowest-price']}}</span></ins>
+                                                    <del><span class="amount">{{product['lowest-price']}}</span></del>
+                                                    </p>
+                                                    <div class="group-buttons">
+                                                        <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                        <span>Add to Cart</span>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                                        <i class="pe-7s-repeat"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                        <i class="pe-7s-like"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            
+                                            
                                         </div>
-                                        <div style=" width:110; height:130" class="overlay-img">
-                                            <a href="single-product.html">
-                                                <img  width="110" height="130" class="img-responsive"  src="assets/images/banner1.jpg"  />
-                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4><a href="single-product.html"></a></h4>
-                                    <p class="price">50EGP</p>
-                                    <div class="group-buttons">
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                        <i class="pe-7s-cart"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                        <i class="pe-7s-repeat"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                        <i class="pe-7s-like"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.new-in -->
-            </div>
-            <div class="col-md-4">
-                <div class="block-item">
-                    <h3>FEATURED</h3>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-6" >
-                            <div class="media">
-                                <div class="media-left">
-                                    <div class="block-thumb">
-                                        <div style=" width:110; height:130" class="main-img">
-                                            <a href="single-product.html">
-                                                <img width="110" height="130" class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-                                            </a>
                                         </div>
-                                        <div style=" width:110; height:130" class="overlay-img">
-                                            <a href="single-product.html">
-                                                <img  width="110" height="130" class="img-responsive"  src="assets/images/banner1.jpg"  />
-                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4><a href="single-product.html"></a></h4>
-                                    <p class="price">70EGP</p>
-                                    <div class="group-buttons">
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                        <i class="pe-7s-cart"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                        <i class="pe-7s-repeat"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                        <i class="pe-7s-like"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.featured -->
-            </div>
-            <div class="col-md-4">
-                <div class="block-item">
-                    <h3>TOP RATED</h3>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-6" >
-                            <div class="media">
-                                <div class="media-left">
-                                    <div class="block-thumb">
-                                        <div style=" width:110; height:130" class="main-img">
-                                            <a href="single-product.html">
-                                                <img width="110" height="130" class="img-responsive" src="assets/images/banner1.jpg" alt="img" />
-                                            </a>
                                         </div>
-                                        <div style=" width:110; height:130" class="overlay-img">
-                                            <a href="single-product.html">
-                                                <img  width="110" height="130" class="img-responsive"  src="assets/images/banner1.jpg"  />
-                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    <h4><a href="single-product.html"></a></h4>
-                                    <p class="price">150EGP</p>
-                                    <div class="group-buttons">
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                        <i class="pe-7s-cart"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                        <i class="pe-7s-repeat"></i>
-                                        </button>
-                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                        <i class="pe-7s-like"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.top-rated -->
-            </div>
-        </div>
-    </div>
-</div>
+                                        </div>
+                                        </div>
+                                 
+                  
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="TOP RATED">
+            <ng-template ngbTabContent>
+                    <div class="sale-off">
+                            <div class="container">
+                                <div id="carousel-2">
+                                    <div class="box-content">
+                                        <div class="showcase">
+                                            <div class="row">
+                                                <div class="box-product">
+                                                    <div class="col-lg-12 col-md-4 col-sm-6">
+                                                        <div class="product-item" *ngFor = "let packag of package['top']" >
+                                                            <div class="product-thumb">
+                                                                <div class="main-img">
+                                                                    <a href="single-product.html">
+                                                                        <img  style = " width: 300px; height:200px;" class="img-responsive" src="{{packag['xfeatured_image']}}" alt="img" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="overlay-img">
+                                                                    <a href="single-product.html">
+                                                                        <img style = " width: 300px; height:200px;" class="img-responsive" src="{{packag['xfeatured_image']}}" alt="img" />
+                                                                    </a>
+                                                                </div>
+                                                                
+                                                                <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                                            </div>
+                                                            <h4 class="product-name"><a href="single-product.html">{{packag['name']}}</a></h4>
+                                                            <p class="product-price">
+                                                            <ins><span class="amount">{{packag['lowest-price']}}</span></ins>
+                                                            <del><span class="amount">{{packag['lowest-price']}}</span></del>
+                                                            </p>
+                                                            <div class="group-buttons">
+                                                                <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                <span>Add to Cart</span>
+                                                                </button>
+                                                                <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                                                <i class="pe-7s-repeat"></i>
+                                                                </button>
+                                                                <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                                <i class="pe-7s-like"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                         
+                          
+            </ng-template>
+          </ngb-tab>
+  </ngb-tabset>
+
+
+  
