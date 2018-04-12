@@ -11,7 +11,8 @@ export class CategoriesComponent implements OnInit {
   public topp:TopCatsResponse = {
     topp:[],
     base_url:null
-  };    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
+  };   
+   slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
   constructor(public categoryService:CategoryService) { 
     this.categoryService.getTop().subscribe(res => {
       this.topp = res['data']
