@@ -14,7 +14,7 @@ export class BrandsComponent {
   public title:string=null
   private last:number = 0;
   private hasMore:boolean = true;
-    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1};
+    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1, autoplay: true, autoplaySpeed: 1000};
 
 
   constructor( public  brandService: BrandService) {

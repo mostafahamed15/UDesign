@@ -11822,7 +11822,7 @@ body {
 }
 .list-social-2 li a {
   border: 1px solid #888;
-  color: #888;
+  
   font-size: 18px;
   height: 36px;
   line-height: 32px;
@@ -16638,7 +16638,7 @@ header .main-nav .current-menu-item > a {
 ----------------------------------------- */
 #map {
   width: 100%;
-  height: 500px;
+  height: 100px;
   margin-bottom: 70px;
 }
 @media (max-width: 767px) {
@@ -19462,4 +19462,10 @@ footer .bottom-footer .list-payment li a:active:before {
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
   color: purple !important;
   background: transparent !important;
+}
+.product-price{
+  color: rgb(201, 187, 2) !important;
+}
+.office-name{
+  color: rgba(22, 12, 12, 0.705) !important;
 }
