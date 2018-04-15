@@ -19457,10 +19457,10 @@ footer .bottom-footer .list-payment li a:active:before {
 }
 .slick-prev:before,
 .slick-next:before {
-  color: #3fc0eb !important;
+  color: rgba(32,95,118) !important;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-  color: purple !important;
+  color: #df5e74 !important;
   background: transparent !important;
 }
 .product-price{
@@ -19468,4 +19468,22 @@ footer .bottom-footer .list-payment li a:active:before {
 }
 .office-name{
   color: rgba(22, 12, 12, 0.705) !important;
+}
+.brand-name a{
+  color:rgba(32,95,118) !important;
+}
+.brand-name a:hover{
+  color: rgba(0, 0, 0, 0.61) !important;
+}
+.count{
+	bottom: 14px !important;
+    position: relative !important;
+    right: 5px !important;
+    border: 2px solid #6b6b68 !important;
+    border-radius: 50% !important;
+    background: #6b6b68 !important;
+}
+.pe-7s-cart{
+  font-size: 27px;
+  
 }
