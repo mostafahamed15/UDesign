@@ -65,6 +65,7 @@ import { BrandSallesOfComponent } from './components/brand-salles-of/brand-salle
 import { BrandByCategoryComponent } from './components/brand-by-category/brand-by-category.component';
 import { FinishingOfficeComponent } from './pages/finishing/finishing-office/finishing-office.component';
 import { InteriorOfficeComponent } from './pages/interior/interior-office/interior-office.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 
@@ -74,6 +75,7 @@ const ROUTES: Routes = [
    //{path:'login',component:SigninComponent},
   // {path:'showdetails/:id',component:DetailsComponent},
   {path:'',component:HomeComponent},
+  {path: 'product/:id', component: ProductComponent},
      {path:'home',component:HomeComponent},
      {path:'brandPage',component:BrandPageComponent},
      {path: 'finishingOffice', component:FinishingOfficeComponent},
@@ -120,6 +122,7 @@ const ROUTES: Routes = [
     BrandByCategoryComponent,
     FinishingOfficeComponent,
     InteriorOfficeComponent,
+    ProductComponent,
    
     
   

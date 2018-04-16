@@ -201,19 +201,19 @@
                   </div>
                   <div class="box-product row">
                       <div *ngFor="let product of products" class="col-md-4 col-sm-6">
-                          <div class="product-item">
+                          <div (click)="product(product.id)" class="product-item">
                               <div class="product-thumb">
                                   <div class="main-img" style="width: 200px; height: 150px">
-                                      <a href="single-product.html">
+                                      <a href="/product">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
-                                      <a href="single-product.html">
+                                      <a href="/product">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
-                                  <a href="/product/{{product['id']}}" class="details"><i class="pe-7s-search"></i></a>
+                                  <a href="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
                               </div>
                               <h4 class="product-name"><a href="single-product.html">{{product.name}}</a></h4>
                               <p class="product-price">
