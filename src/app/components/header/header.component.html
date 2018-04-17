@@ -20,7 +20,7 @@
                             </li>
                             <li>
                                 <a href="#">OFFICES</a>
-                                <ul class="sub-menu">
+                                <ul class="sub-menu" style="height:70px ;">
                                     <li><a href="/finishing">Finishing Offices</a></li>
                                     <li><a href="/interior">Interior Offices</a></li>
                                 </ul>
@@ -41,8 +41,8 @@
                                 </div>
                                 <!-- /.search-form -->
                             </li>
-                            <li style="left: 180px;">
-                                <a href="shopping-cart.html">
+                            <li style="left: 250px; top: 4px;">
+                                <a href="/ShoppingCart">
                                     <i class="pe-7s-cart"></i>
                                     <span class="count">2</span>
                                 </a>
@@ -52,12 +52,12 @@
                                 <button (click)="open()" type="button"  class="btn btn-primary sign-in"><a >Log in</a> </button>
                             </li>
                             <ng-template #user>
-                            <li style="float: right;">
+                            <li style="float: right; margin-top: 5px;">
 
                                 <div class="row">
                                     <div class="col">
                                       <div ngbDropdown class="d-inline-block">
-                                        <img width="20px" id="dropdownBasic1" ngbDropdownToggle src = "assets/images/user.png" alt="user pic">
+                                        <img width="30px" id="dropdownBasic1" ngbDropdownToggle src = "assets/images/user.png" alt="user pic">
                                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                                           <button class="dropdown-item">{{userName['name']}}</button>
                                           <hr>

@@ -1,0 +1,36 @@
+/* .modal-content{
+    z-index: 99999999;
+    position: fixed;
+  top: 315px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background: rgba(32,95,118,.7);
+      }
+img {
+  margin-left: 120px;
+  margin-top: 20px;
+  display: block;
+  width: 90px;
+}
+.modal-header{
+  border: none !important;
+}
+input{
+  display: block;
+  margin: 5px;
+  width: 100%;
+  background: transparent;
+}
+button{
+  display: block;
+  width: 375px;
+    margin-top: 20px;
+}
+ngb-tabset{
+  width: 100%;
+}
+.close{
+  margin-left: -28px;
+} */

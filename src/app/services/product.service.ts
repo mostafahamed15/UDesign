@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { UrlService } from './url.service';
 import { HttpClient } from '@angular/common/http';
+import {Http, Response} from "@angular/http";
+import {Observable} from "rxjs/Observable";
+import "rxjs/Rx";
+
 
 @Injectable()
 export class ProductService {
@@ -15,9 +19,19 @@ export class ProductService {
 	public topProudcts(){
 		return this.http.get(this.urlService.getApiUrl()+'products/top');
 	}
-	public show(id){
+	// public show(id): Observable<any[]>{
+		public show(id){
+		// return this.http.get(this.urlService.getApiUrl()+'products/'+id).map((response: Response) => {
+		// 	return <any[]>response.json();
+		// })
+		// .catch(this.handleError);
 		return this.http.get(this.urlService.getApiUrl()+'products/'+id);
-	}
+}
+// private handleError(error: Response) {
+// 	return Observable.throw(error.statusText);
+// }
+
+	
 	public addToWishList(id){
 		return this.http.get(this.urlService.getApiUrl()+'products/wishlist/'+id);
 	}

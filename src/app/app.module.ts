@@ -66,6 +66,9 @@ import { BrandByCategoryComponent } from './components/brand-by-category/brand-b
 import { FinishingOfficeComponent } from './pages/finishing/finishing-office/finishing-office.component';
 import { InteriorOfficeComponent } from './pages/interior/interior-office/interior-office.component';
 import { ProductComponent } from './components/product/product.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { CheckOutComponent } from './pages/check-out/check-out.component';
+import { TryPremiumComponent } from './pages/profile-page/try-premium/try-premium.component';
 
 
 
@@ -77,6 +80,8 @@ const ROUTES: Routes = [
   {path:'',component:HomeComponent},
   {path: 'product/:id', component: ProductComponent},
      {path:'home',component:HomeComponent},
+     {path:'ShoppingCart',component:ShoppingCartComponent},
+     {path:'CheckOut',component:CheckOutComponent},
      {path:'brandPage',component:BrandPageComponent},
      {path: 'finishingOffice', component:FinishingOfficeComponent},
      {path: 'interiorOffice', component:InteriorOfficeComponent},
@@ -123,6 +128,9 @@ const ROUTES: Routes = [
     FinishingOfficeComponent,
     InteriorOfficeComponent,
     ProductComponent,
+    ShoppingCartComponent,
+    CheckOutComponent,
+    TryPremiumComponent,
    
     
   
@@ -174,7 +182,7 @@ const ROUTES: Routes = [
   entryComponents:[
     HeaderComponent,
     
-   
+    TryPremiumComponent,
     AppComponent,
     SigninComponent ],
   bootstrap: [AppComponent]

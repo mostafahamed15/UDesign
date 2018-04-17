@@ -19,6 +19,7 @@ MINIMAL CSS3 MENU
 }
 .minimal-menu ul {
 	z-index: 100;
+	bottom: 13px;
 }
 .minimal-menu ul li a {
 	display: block;

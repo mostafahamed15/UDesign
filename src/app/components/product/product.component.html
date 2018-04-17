@@ -7,10 +7,12 @@
                       <div class="images">
                           <div id="product-showcase">
                               <div class="gallery">
-                                  <div class="full"  *ngFor = "let detail of details['product']">
-                                      <img src="{{detail['brands']['xfeatured_image']}}"/>
+                                    
+                                  <div class="full" >
+                                      <img src="{{details.xfeatured_image}}"/>
                                       <a href="#" class="details"><i class="pe-7s-search"></i></a>
                                   </div>
+                                  
                                   <div class="previews">
                                       <!-- <div class="box-content">
                                           <div>
@@ -54,7 +56,7 @@
                        
                       <!-- /.breadcrumb -->
                       <div class="summary">
-                          <h2 class="product-name">Blue Stripes Summer Supreme Top</h2>
+                          <h2 class="product-name">{{details.name}}</h2>
                           <div class="product-statistic">
                               <span class="review-count">30 REVIEWS</span>
                               <span class="review-star-read star-rating" data-score="4"></span>
@@ -63,9 +65,7 @@
                               $290.50
                           </div>
                           <div class="short-desc">
-                              This is a <strong>Demo Online Store</strong>. No orders shall be fulfilled.<br />
-                              <strong>Zorka is a Design-Driven Shop Theme for WooCommerce and WordPress.</strong> If you’re planning to start an online store right away, look no further, get this theme on ThemeForest.<br />
-                              This product page demonstrates a “Simple Product“.
+                                {{details.description}}
                           </div>
                           <div class="product-action">
                               <div class="clearfix">

@@ -23,7 +23,7 @@ details: any;
 console.log(this.id)
     this.product.show(this.id).subscribe((res)=>{
 
-        this.details = res['data'];
+        this.details = res['data']['product'];
         console.log(this.details);
     },(err)=>{
 

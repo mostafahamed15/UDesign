@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CookieService } from 'ngx-cookie-service';
+import { TryPremiumComponent } from './try-premium/try-premium.component';
+import {Router} from '@angular/router';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-profile-page',
@@ -14,6 +17,7 @@ userinfo;
 public likes:any[] = [];
 public wishes:any[] = [];
   constructor(public userService: UserService,
+    public modalService: NgbModal,
   public cookieService: CookieService) { 
     this.cookieinfo  = this.cookieService.get('token');
     this.userinfo = this.cookieService.get('user');
@@ -36,7 +40,10 @@ public wishes:any[] = [];
 
   }
 
-
+  // open() {
+  //   const modalRef = this.modalService.open(TryPremiumComponent);
+  //   modalRef.componentInstance.name = 'World';
+  // }
   ngOnInit() {
   }
 
