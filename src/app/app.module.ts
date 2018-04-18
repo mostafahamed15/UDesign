@@ -95,6 +95,7 @@ const ROUTES: Routes = [
   {path:'news',component: LatestnewsComponent},
   //{path:'singlepost',component: SinglepostComponent},
   {path:'contact',component: ContactusComponent},
+  {path:'package',component: PackageComponent},
   // {path:'product/:id',component: SingleproductComponent},
 
 ];

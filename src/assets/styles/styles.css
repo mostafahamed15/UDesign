@@ -11972,6 +11972,7 @@ header .wrap-search {
 }
 header .wrap-search .search-form {
   position: absolute;
+  right: -6px
 }
 header .wrap-search .search-form:hover input[type="text"],
 header .wrap-search .search-form:focus input[type="text"] {
