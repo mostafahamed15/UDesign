@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 import { RouterModule, Router } from '@angular/router';
+import { count } from 'rxjs/operators';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -8,14 +10,26 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class ItemsComponent implements OnInit {
   public products:any[] =[];
-  constructor( public productService:ProductService, public router:Router ) {
+  public cartNumber: any;
+  productName;
+  color;
+  size;
+  qty;
+  constructor( public productService:ProductService,
+     public router:Router,
+     public cartService: CartService ) {
     this.productService.index().subscribe(res => {
       this.products = res['data']['products'];
       console.log(this.products)
     },err => console.log(err));
+    // this.cart();
    }
 
   ngOnInit() {
+   
+  }
+  cart(count:number){
+    this.cartService.changeCart(count);
   }
   product(id){
     this.router.navigateByUrl('product/' + id);

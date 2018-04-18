@@ -10,6 +10,8 @@ import {ProductService } from '../../services/product.service';
 export class ProductComponent {
 id: any;
 details: any;
+like: any;
+public isLiked=true;
   constructor( private route: ActivatedRoute,
   public product: ProductService) { 
     this.route.params.subscribe(params=>{
@@ -30,6 +32,20 @@ console.log(this.id)
         console.log(err)
     }
 )};
+addLike(){
+
+    
+    if (this.isLiked){
+        this.details.likes += 1;
+        this.isLiked = !this.isLiked;
+    }else{
+        this.details.likes -= 1;
+        this.isLiked = !this.isLiked;
+    }
+console.log( this.details.likes);
+
+}
+
 }
   
 

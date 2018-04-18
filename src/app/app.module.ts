@@ -69,6 +69,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { TryPremiumComponent } from './pages/profile-page/try-premium/try-premium.component';
+import { CartService } from './services/cart.service';
 
 
 
@@ -175,7 +176,8 @@ const ROUTES: Routes = [
     InteriorService,
     FinishingService,
     PackageService,
-    UserService
+    UserService,
+    CartService
 
 
   ],

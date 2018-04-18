@@ -44,7 +44,7 @@
                             <li style="left: 250px; top: 4px;">
                                 <a href="/ShoppingCart">
                                     <i class="pe-7s-cart"></i>
-                                    <span class="count">2</span>
+                                    <span class="count">{{cartService.count || '0' }}</span>
                                 </a>
                             </li>
                             <li *ngIf = "!UserInfo; else user">
