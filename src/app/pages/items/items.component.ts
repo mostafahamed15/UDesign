@@ -22,15 +22,13 @@ export class ItemsComponent implements OnInit {
       this.products = res['data']['products'];
       console.log(this.products)
     },err => console.log(err));
-    // this.cart();
+    
    }
 
   ngOnInit() {
    
   }
-  cart(count:number){
-    this.cartService.changeCart(count);
-  }
+  
   product(id){
     this.router.navigateByUrl('product/' + id);
   }

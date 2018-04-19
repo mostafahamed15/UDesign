@@ -70,6 +70,7 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { TryPremiumComponent } from './pages/profile-page/try-premium/try-premium.component';
 import { CartService } from './services/cart.service';
+import { AllCaregoriesComponent } from './pages/all-caregories/all-caregories.component';
 
 
 
@@ -96,6 +97,7 @@ const ROUTES: Routes = [
   //{path:'singlepost',component: SinglepostComponent},
   {path:'contact',component: ContactusComponent},
   {path:'package',component: PackageComponent},
+  {path:'AllCaregories',component: AllCaregoriesComponent},
   // {path:'product/:id',component: SingleproductComponent},
 
 ];
@@ -133,6 +135,7 @@ const ROUTES: Routes = [
     ShoppingCartComponent,
     CheckOutComponent,
     TryPremiumComponent,
+    AllCaregoriesComponent,
    
     
   

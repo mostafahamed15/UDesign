@@ -1,7 +1,7 @@
 <div class="main" style="padding-top: 200px;">
     <div class="container">
         <div class="header-page">
-            <h1>All packages</h1>
+            <h1>All Categories</h1>
         </div>
         <!-- /.header-page -->
         <div class="row">
@@ -200,24 +200,24 @@
                         </div>
                     </div>
                     <div class="box-product row">
-                        <div *ngFor="let package of packages['packages']" class="col-md-4 col-sm-6">
+                        <div *ngFor="let top of topp['topCats']" class="col-md-4 col-sm-6">
                             <div class="product-item">
                                 <div class="product-thumb">
                                     <div class="main-img" style="width: 200px; height: 150px">
                                         <a href="/product">
-                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
                                         </a>
                                     </div>
                                     <div class="overlay-img">
                                         <a href="/product">
-                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
                                         </a>
                                     </div>
                                     <a href="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
                                 </div>
-                                <h4 class="product-name"><a href="single-product.html">{{package.name}}</a></h4>
+                                <h4 class="product-name"><a href="single-product.html">jjj</a></h4>
                                 <p class="product-price">
-                                {{package.lowest_price}} EGP
+                                {{top.category_name}}
                                 </p>
                                 <div class="group-buttons">
                                     <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
