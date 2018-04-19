@@ -25,6 +25,10 @@ export class AllCaregoriesComponent implements OnInit {
   product(id){
     this.router.navigateByUrl('product/' + id);
   }
+
+  child(){
+    
+  }
 }
 interface TopCatsResponse{
   topp:any[];

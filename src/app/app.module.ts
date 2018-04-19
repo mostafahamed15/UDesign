@@ -71,6 +71,8 @@ import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { TryPremiumComponent } from './pages/profile-page/try-premium/try-premium.component';
 import { CartService } from './services/cart.service';
 import { AllCaregoriesComponent } from './pages/all-caregories/all-caregories.component';
+import { SubcatComponent } from './pages/all-caregories/subcat/subcat.component';
+import { ProductByCategoriesComponent } from './pages/product-by-categories/product-by-categories.component';
 
 
 
@@ -98,6 +100,8 @@ const ROUTES: Routes = [
   {path:'contact',component: ContactusComponent},
   {path:'package',component: PackageComponent},
   {path:'AllCaregories',component: AllCaregoriesComponent},
+  {path:'Subcat',component: SubcatComponent},
+  {path:'categories/:id/products',component: ProductByCategoriesComponent},
   // {path:'product/:id',component: SingleproductComponent},
 
 ];
@@ -136,6 +140,8 @@ const ROUTES: Routes = [
     CheckOutComponent,
     TryPremiumComponent,
     AllCaregoriesComponent,
+    SubcatComponent,
+    ProductByCategoriesComponent,
    
     
   
