@@ -51,21 +51,21 @@ public products:any[]=[];
   }
   ngOnInit() {
   }
-  getProducts(e){
-    this.productService.get({last:this.last}).subscribe((res)=>{
-      if(e){e.complete()}
-      if(res['data'] ['products'].length < 1){ this.hasMore = false}
-      res['data'] ['products'].map((product)=>{
-        this.products.push(product);
-      });
-    this.title = 'Products';
-      this.last = res['data']['last'];
-   },(err)=>{
-     if(e){e.complete()}
-   });
+  // getProducts(e){
+  //   this.productService.get({last:this.last}).subscribe((res)=>{
+  //     if(e){e.complete()}
+  //     if(res['data'] ['products'].length < 1){ this.hasMore = false}
+  //     res['data'] ['products'].map((product)=>{
+  //       this.products.push(product);
+  //     });
+  //   this.title = 'Products';
+  //     this.last = res['data']['last'];
+  //  },(err)=>{
+  //    if(e){e.complete()}
+  //  });
 
 
- }
+ //}
 
 
 

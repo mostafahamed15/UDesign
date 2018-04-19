@@ -91,18 +91,18 @@
                           <div class="product-item">
                               <div class="product-thumb">
                                   <div class="main-img" style="width: 200px; height: 150px">
-                                      <a href="/product/{{product.id}}">
+                                      <a href="/product/{{package['id']}}">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
-                                      <a href="/product/{{product.id}}">
+                                      <a href="/product/{{package['id']}}">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
-                                  <a href="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
+                                  <a href="/product/{{package['id']}}" class="details"><i class="pe-7s-search"></i></a>
                               </div>
-                              <h4 class="product-name"><a href="/product/{{product.id}}">{{package['description']}}</a></h4>
+                              <h4 class="product-name"><a href="/product/{{package['id']}}">{{package['description']}}</a></h4>
                               <p class="product-price">
                               {{package.lowest_price}} EGP
                               </p>
