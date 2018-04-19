@@ -18,7 +18,8 @@ public products:any[]=[];
   constructor( public productService: ProductService,
   
                 public categoryService: CategoryService,
-                public route:ActivatedRoute
+                public route:ActivatedRoute,
+                public router: Router,
 
   ) {
 
@@ -36,7 +37,7 @@ public products:any[]=[];
     if(this.nid!= null){
       this.categoryService.products(this.nid).subscribe(res=>{
       this.products = res['data'];
-      console.log(this.products)
+      console.log(this.products);
     },err=>{
     
     });
@@ -45,7 +46,9 @@ public products:any[]=[];
 
 
    }
-
+   product(id){
+    this.router.navigateByUrl('product/' + id);
+  }
   ngOnInit() {
   }
   getProducts(e){
