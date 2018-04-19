@@ -73,6 +73,7 @@ import { CartService } from './services/cart.service';
 import { AllCaregoriesComponent } from './pages/all-caregories/all-caregories.component';
 import { SubcatComponent } from './pages/all-caregories/subcat/subcat.component';
 import { ProductByCategoriesComponent } from './pages/product-by-categories/product-by-categories.component';
+import { PackageWithProductComponent } from './components/package/package-with-product/package-with-product.component';
 
 
 
@@ -102,6 +103,7 @@ const ROUTES: Routes = [
   {path:'AllCaregories',component: AllCaregoriesComponent},
   {path:'Subcat',component: SubcatComponent},
   {path:'categories/:id/products',component: ProductByCategoriesComponent},
+  {path: 'Package/:id', component:PackageWithProductComponent}
   // {path:'product/:id',component: SingleproductComponent},
 
 ];
@@ -142,6 +144,7 @@ const ROUTES: Routes = [
     AllCaregoriesComponent,
     SubcatComponent,
     ProductByCategoriesComponent,
+    PackageWithProductComponent,
    
     
   
