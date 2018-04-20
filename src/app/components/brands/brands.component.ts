@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrandService } from '../../services/brand.service'
+import { BrandService } from '../../services/brand.service';
 import { SlickModule } from 'ngx-slick';
 
 

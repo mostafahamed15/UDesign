@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
 import {TranslateLoaderFactory} from './services/translateloader';
 import {TitleService} from './services/title.service';
 import {CategoryService} from './services/category.service';
+import{ FilterService } from './services/filter.service';
 
 import { RequestsInterceptor } from './services/request.service';
 import { UrlService } from './services/url.service';
@@ -190,7 +191,8 @@ const ROUTES: Routes = [
     FinishingService,
     PackageService,
     UserService,
-    CartService
+    CartService,
+    FilterService
 
 
   ],
