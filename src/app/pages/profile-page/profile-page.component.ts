@@ -33,9 +33,9 @@ public wishes:any[] = [];
   	});
     
     if (this.cookieinfo){ 
-      this.userinfo = JSON.parse(this.userinfo)
+      this.userinfo = JSON.parse(this.userinfo);
 
-      console.log(this.userinfo)
+      console.log(this.userinfo);
     }
 
   }

@@ -18,6 +18,7 @@ export class ItemsComponent implements OnInit {
   color;
   size;
   qty;
+  filter;
   public brandsfilter: any;
   public categoriesfilter: any;
   public categories: any[] = [];
@@ -56,11 +57,17 @@ export class ItemsComponent implements OnInit {
     },err => console.log(err));
 
    this.filterService.getCategories().subscribe((res)=>{
-        this.categoriesfilter=res['data']['categories'];
-       
+        this.categoriesfilter = res['data']['categories'];
+        
         console.log(this.categories);
      
    },err => console.log(err));
+   this.filterService.filter('data').subscribe((res)=>{
+    this.filter = res['data'];
+    
+    console.log(this.filter);
+ 
+},err => console.log(err));
 
   }
 
@@ -69,6 +76,7 @@ export class ItemsComponent implements OnInit {
   ngOnInit() {
    
   }
+  
   
   toggleFilters(name,id){
     let index = this.filters[name].indexOf(id);
