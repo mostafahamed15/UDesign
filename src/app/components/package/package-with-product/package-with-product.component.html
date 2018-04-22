@@ -23,17 +23,17 @@
                       </div>
                   </div>
                   <div class="box-product row">
-                      <div  class="col-md-4 col-sm-6">
+                      <div  class="col-md-12 col-sm-6">
                           <div class="product-item">
                               <div class="product-thumb">
-                                  <div class="main-img" style="width: 200px; height: 150px">
+                                  <div class="main-img" >
                                       <a href="/package">
-                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{packages['package']['xfeatured_image']}}" alt="img" />
+                                          <img  class="img-responsive" src="{{packages['package']['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
                                       <a href="/package">
-                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{packages['package']['xfeatured_image']}}" alt="img" />
+                                          <img  class="img-responsive" src="{{packages['package']['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
                                   <a href="/package" class="details"><i class="pe-7s-search"></i></a>
@@ -42,7 +42,7 @@
                               <p class="product-price">
                                 {{packages['package']['price']}} EGP
                               </p>
-                              <div class="group-buttons">
+                              <div class="group-buttons" style="text-align: center">
                                   <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
                                   <span>Add to Cart</span>
                                   </button>
@@ -87,17 +87,17 @@
                       </div>
                   </div>
                   <div class="box-product row">
-                      <div *ngFor="let package of packages['products']" class="col-md-4 col-sm-6">
+                      <div *ngFor="let package of packages['products']" class="col-md-12 col-sm-6">
                           <div class="product-item">
                               <div class="product-thumb">
-                                  <div class="main-img" style="width: 200px; height: 150px">
+                                  <div class="main-img" >
                                       <a href="/product/{{package['id']}}">
-                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                          <img class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
                                       <a href="/product/{{package['id']}}">
-                                          <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                          <img  class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
                                       </a>
                                   </div>
                                   <a href="/product/{{package['id']}}" class="details"><i class="pe-7s-search"></i></a>
@@ -106,7 +106,7 @@
                               <p class="product-price">
                               {{package.lowest_price}} EGP
                               </p>
-                              <div class="group-buttons">
+                              <div class="group-buttons" style="text-align: center">
                                   <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
                                   <span>Add to Cart</span>
                                   </button>
