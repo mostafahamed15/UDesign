@@ -114,20 +114,23 @@ public count(qty) {
     return;
   }else{
     this.counter = 0;
-
-
   }
 }
 
 public addToCart(){
+  console.log("Counter: " ,this.counter)
   let product = this.product['id'];
   let size = this.product['all_sizes'][this.currentSize].size_id;
   let color = this.product['colors'][this.currentColor]?this.product['colors'][this.currentColor].id:0;
   this.cartService.addToCart(product,
     color,
     size,this.counter).subscribe(res=>{
-      this.counter = this.getQty();
+      this.counter+=1
     });
+    console.log("Product : ",this.product[this.id]);
+    // console.log("Size : ",size);
+    // console.log("Color: ",color);
+    // console.log("Counter : ",this.counter);
 }
 public remove(){
   let product = this.product['id'];
@@ -158,7 +161,14 @@ public showDimensions(size,index){
     this.counter = this.getQty();
 }
   
-
+PlusCounter(){
+  console.log(this.counter);
+  this.counter+=1
+}
+MinusCounter(){
+  console.log(this.counter);
+  this.counter-=1
+}
 
 public showColors(index){
   this.currentColor = index;

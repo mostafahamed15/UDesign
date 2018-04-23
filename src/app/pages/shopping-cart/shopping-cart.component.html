@@ -23,7 +23,7 @@
                               <td class="product-remove"><a href="#" class="remove"><i class="fa fa-times"></i></a></td>
                               <td class="product-thumbnail">
                                   <a href="single-product.html">
-                                      <img class="img-responsive" src="assets/images/small-product-1.jpg" alt="img" />
+                                      <img class="img-responsive" src="assets/images/logo.png" alt="img" />
                                   </a>
                               </td>
                               <td class="product-name">
@@ -34,9 +34,9 @@
                               <td class="product-price"><span class="amount">900USD</span></td>
                               <td class="product-quantity">
                                   <div class="quantity">
-                                      <button class="minus-btn"><i class="fa fa-minus"></i></button>
-                                      <input type="text" value="2" />
-                                      <button class="plus-btn"><i class="fa fa-plus"></i></button>
+                                      <button class="minus-btn" (click)="MinusCounter()"><i class="fa fa-minus"></i></button>
+                                      <input type="text"  value={{counter}} />
+                                      <button class="plus-btn" (click)="PlusCounter()"><i class="fa fa-plus"></i></button>
                                   </div>
                               </td>
                               <td class="product-subtotal"><span class="amount">1800USD</span></td>
@@ -45,7 +45,7 @@
                               <td class="product-remove"><a href="#" class="remove"><i class="fa fa-times"></i></a></td>
                               <td class="product-thumbnail">
                                   <a href="single-product.html">
-                                      <img class="img-responsive" src="assets/images/small-product-3.jpg" alt="img" />
+                                      <img class="img-responsive" src="assets/images/logo.png" alt="img" />
                                   </a>
                               </td>
                               <td class="product-name">

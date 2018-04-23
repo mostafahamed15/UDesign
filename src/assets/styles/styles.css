@@ -6042,6 +6042,7 @@ button.close {
 }
 .show {
   display: block !important;
+  margin-right: 50px;
 }
 .invisible {
   visibility: hidden;
