@@ -12,7 +12,9 @@ import { FilterService } from '../../services/filter.service';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  flag = false;
   public products:any[] =[];
+  public product1:any[] =[];
   public cartNumber: any;
   productName;
   color;
@@ -38,7 +40,8 @@ export class ItemsComponent implements OnInit {
   public filterService:FilterService ) {
     this.productService.index().subscribe(res => {
       this.products = res['data']['products'];
-      console.log(this.products)
+      console.log(this.products);
+      console.log(this.filters);
     },err => console.log(err));
     this.categoryService.getTop().subscribe(res => {
       this.categories = res['data'];
@@ -49,7 +52,7 @@ export class ItemsComponent implements OnInit {
       console.log(this.brands);
     },err => console.log(err));
     this.filterService.getBrands().subscribe((res)=>{
-       this.brandsfilter=res['data']['brands'];
+       this.brandsfilter=res['data'];
       
 
        console.log(this.brandsfilter);
@@ -68,6 +71,10 @@ export class ItemsComponent implements OnInit {
     console.log(this.filter);
  
 },err => console.log(err));
+this.filterService.getProducts('id').subscribe(res => {
+  this.products = res['data']['products'];
+  console.log(this.products);
+},err => console.log(err));
 
   }
 
@@ -79,17 +86,18 @@ export class ItemsComponent implements OnInit {
   
   
   toggleFilters(name,id){
-    let index = this.filters[name].indexOf(id);
-    if(index === -1){
-      this.filters[name].push(id);
-      console.log('added '+name, this.filters[name])
-      return;
+    this.flag = true;
+    for(let i =0 ; i<=5 ; i++){
+      if(this.products[i].brand_id === id){
+        this.product1[i] = this.products[i];
+      // console.log(this.products[i]);
+      
+      }
     }
-    this.filters[name].splice(index,1);
-    console.log('removed '+name,this.filters[name])
- 
- 
+    console.log(this.product1);
+    
    }
+
 
   product(id){
     this.router.navigateByUrl('product/' + id);

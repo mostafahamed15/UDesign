@@ -78,6 +78,7 @@ import { PackageWithProductComponent } from './components/package/package-with-p
 
 
 
+
 const ROUTES: Routes = [
    //{path:'signup',component:SignupComponent},
   // {path:'forgot-passowrd',component:ForgotPasswordComponent},
@@ -146,6 +147,7 @@ const ROUTES: Routes = [
     SubcatComponent,
     ProductByCategoriesComponent,
     PackageWithProductComponent,
+  
    
     
   

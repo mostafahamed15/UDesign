@@ -3,7 +3,7 @@
       <div class="header-page">
           <h1>All Products</h1>
       </div>
-      <!-- /.header-page -->
+    
       <div class="row">
           <div class="col-md-3">
               <div class="sidebar">
@@ -34,9 +34,9 @@
                 <button type="submit" class="btn btn-primary">filter</button>
             </form>
               </div>
-              <!-- /.sidebar -->
+              
           </div>
-          <div class="col-md-9" >
+          <div class="col-md-9" *ngIf = "!flag; else filter" >
               <div class="main-content">
                   <div class="top-products">
                       <div class="showing-results">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="box-product row">
-                    <div *ngFor="let product of products" class="col-md-4 col-sm-6">
+                    <div *ngFor="let product of product1" class="col-md-4 col-sm-6">
                         <div class="product-item">
                             <div class="product-thumb">
                                 <div class="main-img" style="width: 200px; height: 150px">
