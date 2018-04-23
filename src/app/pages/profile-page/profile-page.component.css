@@ -159,3 +159,11 @@ footer h4 a {
 .box-product{
   width: 100%;
 }
+.pencil-cover{
+position: relative;
+top: -500px;
+}
+.pencil-img{
+position: relative;
+top: -500px;
+}

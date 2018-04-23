@@ -1,0 +1,89 @@
+<div class="main" style="padding-top: 150px;">
+    <div class="container">
+<div class="row">
+    <div class="card">
+      <div class="card-body">
+    <form  [formGroup]="profileForm" novalidate>
+<div class="col-xs-12">
+<div class="col-md-12">
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="name" class="control-label required">Name:</label>
+            <input class="form-control" placeholder="Name..."
+            type="text" id="name" formControlName="name">
+        </div>
+      </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="email" class="control-label required">Email Address:</label>
+            <input class="form-control" placeholder="Email..."
+            type="email" id="email" formControlName="email">
+        </div>
+      </div>
+<div class="col-xs-12 col-md-6">
+  <div class="form-group">
+      <label for="phone" class="control-label required">Mobile</label>
+      <input class="form-control" placeholder="Mobile..."
+      type="text" id="phone" formControlName="phone">
+  </div>
+</div>
+<div class="col-xs-12">
+  <div class="form-group" *ngIf="user['ximage']">
+      <img src="{{user['ximage']}}"   width="100" height="100">
+  </div>
+  <div class="form-group">
+      <label for="event_image" class="control-label required">Logo</label>
+      <div class="styledFile" id="input-event_image">
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <span class="btn btn-primary btn-file ">
+                      Browse… <input type="file" (change)="getLogoUrl($event)" #logo>
+                  </span>
+              </span>
+              <input type="text" class="form-control" readonly="">
+              <span style="display: none;" class="input-group-btn btn-upload-file">
+                  <span class="btn btn-success ">
+                      Upload
+                  </span>
+              </span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-xs-12">
+  <div class="form-group" *ngIf="user['xcover_photo']">
+      <img src="{{user['xcover_photo']}}" width="300">
+  </div>
+  <div class="form-group">
+      <label for="event_image" class="control-label required">Cover</label>
+      <div class="styledFile" id="input-event_image">
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <span class="btn btn-primary btn-file ">
+                      Browse… <input type="file" (change)="getCoverUrl($event)"  #cover>
+                  </span>
+              </span>
+              <input type="text" class="form-control" readonly="">
+              <span style="display: none;" class="input-group-btn btn-upload-file">
+                  <span class="btn btn-success ">
+                      Upload
+                  </span>
+              </span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-xs-12">
+<div class="modal-footer">
+<span class="uploadProgress"></span>
+<input class="btn btn-success capitalize" type="submit" [disabled]="!profileForm.valid  || submitting" value="Update Profile" (click)="submitProfile()">
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

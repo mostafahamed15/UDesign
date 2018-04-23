@@ -75,6 +75,7 @@ import { AllCaregoriesComponent } from './pages/all-caregories/all-caregories.co
 import { SubcatComponent } from './pages/all-caregories/subcat/subcat.component';
 import { ProductByCategoriesComponent } from './pages/product-by-categories/product-by-categories.component';
 import { PackageWithProductComponent } from './components/package/package-with-product/package-with-product.component';
+import { EditProfileComponent } from './pages/profile-page/edit-profile/edit-profile.component';
 
 
 
@@ -105,7 +106,8 @@ const ROUTES: Routes = [
   {path:'AllCaregories',component: AllCaregoriesComponent},
   {path:'Subcat',component: SubcatComponent},
   {path:'categories/:id/products',component: ProductByCategoriesComponent},
-  {path: 'Package/:id', component:PackageWithProductComponent}
+  {path: 'Package/:id', component:PackageWithProductComponent},
+  {path: 'profile/edit', component: EditProfileComponent}
   // {path:'product/:id',component: SingleproductComponent},
 
 ];
@@ -147,6 +149,7 @@ const ROUTES: Routes = [
     SubcatComponent,
     ProductByCategoriesComponent,
     PackageWithProductComponent,
+    EditProfileComponent,
   
    
     
