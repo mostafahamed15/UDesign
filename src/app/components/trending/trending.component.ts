@@ -27,9 +27,9 @@ export class TrendingComponent implements OnInit {
       this.products = res['data'];
       // console.log(this.products);
     },err => console.log(err));
-    this.categoryService.get('data').subscribe(res => {
+    this.categoryService.getTop().subscribe(res => {
       this.category = res['data'];
-      // console.log(this.category);
+      console.log(this.category);
     },err => console.log(err));
     this.packageService.topPackages().subscribe(res => {
       this.package = res['data'];

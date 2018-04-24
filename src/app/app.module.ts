@@ -11,6 +11,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {AccordionModule} from 'primeng/accordion';     
 import {MenuItem} from 'primeng/api'; 
 import {CarouselModule} from 'primeng/carousel';
+import { NgStyle } from '@angular/common';
 
 //components
 import { AppComponent } from './app.component';
@@ -45,7 +46,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TrendingComponent } from './components/trending/trending.component';
-import { NewFeaturedTopratedComponent } from './components/new-featured-toprated/new-featured-toprated.component';
+
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ItemsComponent } from './pages/items/items.component';
@@ -121,7 +122,7 @@ const ROUTES: Routes = [
     SliderComponent,
     FooterComponent,
     TrendingComponent,
-    NewFeaturedTopratedComponent,
+    
     CategoriesComponent,
     BlogComponent,
     ItemsComponent,

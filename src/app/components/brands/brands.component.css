@@ -7,7 +7,3 @@
     padding-top: 20px;
     background: #c4c4c438;
 }
-.slick-prev:before,
-.slick-next:before {
-  color: #000 !important;
-}

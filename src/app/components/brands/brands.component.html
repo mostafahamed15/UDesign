@@ -1,26 +1,26 @@
 
      <div class="shop-by-categories">
      <div class="container">
-            <h3>Brands</h3>
+            <h1 [ngStyle] = "{'color': 'black'}" >Brands</h1>
      <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let brand of brands" class="slide" >
                     <div class="box-content">
                         <div class="category-item">
                             <div class="category-thumb">
-                                <div  class="main-img">
+                                <div  class="main-img" [ngStyle] = "{'width.px': '230', 'height.px': '150',   'background': 'white'}">
                                     <a href="/brandPage">
-                                        <img style ="width: 230px; height:160px;"  class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
+                                        <img  [ngStyle] = "{'width.px': '230', 'height.px': '150', 'background': 'white'}" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
                                     </a>
                                 </div>
                                 <div class="overlay-img">
                                     <a href="/brandPage">
-                                        <img style ="width: 230px; height:160px;" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
+                                        <img [ngStyle] = "{'width.px': '230', 'height.px': '150'}" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
                                     </a>
                                 </div>
                             </div>
                            
                         </div>
- <h4 style="text-align: center;   " class="brand-name"><a href="/brandPage">{{brand['brand_name']}}</a></h4>
+ <h4 [ngStyle] = "{'text-align': 'center'}" class="brand-name"><a href="/brandPage">{{brand['brand_name']}}</a></h4>
         </div>
     </div>
     </ngx-slick>
