@@ -9,39 +9,33 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent  {
+export class ShoppingCartComponent implements OnInit {
 
   user: any;
   cookieinfo;
-  userinfo;
+  public shoppingCart;
   public carts:any;
   product;
   color;
   size;
   qty;
   counter=0;
-  cart;
+ public cartLast: any ;
     constructor(public cartService: CartService,
       public modalService: NgbModal,
-    public cookieService: CookieService) { 
-      this.cookieinfo  = this.cookieService.get('token');
-      this.userinfo = this.cookieService.get('cart');
+      public cookieService: CookieService
+    ){
     
+      this.fetchCart();
+    }
 
-      this.cartService.addToCart(this.product,this.color,this.size,this.qty).subscribe((res:any[])=>{
-        this.carts = res;
-       
-      console.log(this.carts);
-      console.log(this.userinfo);
+    fetchCart(){
+      this.cartService.getCart().subscribe((res: ShoppingCart)=>{
+        // console.log(res);
+        this.shoppingCart = res.products;
+        
+        console.log('shoppingCart',this.shoppingCart)
       });
-     
-      
-      if (this.cookieinfo){ 
-        this.userinfo = JSON.parse(this.userinfo);
-  
-        console.log(this.userinfo);
-      }
-  
     }
   
     // open() {
@@ -49,6 +43,9 @@ export class ShoppingCartComponent  {
     //   modalRef.componentInstance.name = 'World';
     // }
     ngOnInit() {
+      console.log(this.cartLast);
+
+
     }
     PlusCounter(){
       console.log(this.counter);
@@ -59,4 +56,11 @@ export class ShoppingCartComponent  {
       this.counter-=1
     }
   }
-  
+
+  interface ShoppingCart{
+    products:Products[]
+  }
+
+  interface Products{
+    brand_id:number
+  }

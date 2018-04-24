@@ -18,22 +18,17 @@ export class CartService {
 	public getCart(){
 		return new Observable(observer=>{
   
-			this.cart1 = this.storage.get('cart');
-				if(this.cart1){
-					this.cart = JSON.parse(this.cart1);
-					observer.next(1)
-					observer.complete();
-				}else{
+	
 					this.http.get(this.urlService.getApiUrl()+'cart').subscribe(res=>{
 						this.cart = res['data'];
+						this.storage.delete('cart');
 						this.storage.set('cart',JSON.stringify(this.cart));
-						observer.next(1)
+						observer.next(this.cart)
 						observer.complete();
 					},err=>{
 						observer.next(1)
 						observer.complete();
 					});
-				}
 			});
 
 		
