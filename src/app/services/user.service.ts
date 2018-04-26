@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { UrlService } from './url.service';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
+  public reloadProfile:EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private UrlService: UrlService,
   private http:HttpClient ) { }

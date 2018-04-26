@@ -83,12 +83,14 @@ export class EditProfileComponent implements OnInit {
 	      const formData = new FormData();
 	      formData.append("image", fileBrowser.files[0]);
 	      this.userService.uploadCoverPhoto(formData).subscribe(res => {
-          this.getUserInfo();
+					this.getUserInfo();
+					this.userService.reloadProfile.emit(true);
 	      	// console.log(res)
 	        // do stuff w/my uploaded file
         },
       err=>{
-        this.getUserInfo();
+				this.getUserInfo();
+				this.userService.reloadProfile.emit(true);
       });
 	    }
 	}
@@ -102,16 +104,17 @@ export class EditProfileComponent implements OnInit {
 	      	// console.log(res)
 	      	this.submitting = false;
 	      	this.getUserInfo();
-
+					this.userService.reloadProfile.emit(true);
 	        // do stuff w/my uploaded file
 	      },err=>{
 	      	this.submitting = false;
-	      	this.getUserInfo();
+					this.getUserInfo();
+					this.userService.reloadProfile.emit(true);
 	      });
 	    }else{
 	    	this.submitting = false;
 	    	this.getUserInfo();
-
+				this.userService.reloadProfile.emit(true);
 	    }
 
 	}

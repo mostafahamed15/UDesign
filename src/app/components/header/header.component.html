@@ -5,7 +5,7 @@
             <div class="container">
 
                 <nav class="main-nav" style="    top: 46px ">
-                <a class="logo" href="index.html" style="right:auto;     top: -35px;">
+                <a class="logo"style="right:auto;     top: -35px;">
                     <img width="90px" src="assets/images/logo.png" alt="img" style="right:none; margin-right: 29px;"  />
                 </a>
                            
@@ -13,48 +13,48 @@
                         <ul class="menu">
   
                             <li class="current-menu-item">
-                                <a href="/home">HOME</a>
+                                <a routerLink="/home">HOME</a>
                             </li>
                             <li>
-                                <a href="/products">ALL PRODUCTS</a>
+                                <a routerLink="/products">ALL PRODUCTS</a>
                             </li>
                             <li>
-                                <a href="#">OFFICES</a>
+                                <a routerLink="#">OFFICES</a>
                                 <ul class="sub-menu" style="height:70px ;">
-                                    <li><a href="/finishing">Finishing Offices</a></li>
-                                    <li><a href="/interior">Interior Offices</a></li>
+                                    <li><a routerLink="/finishing">Finishing Offices</a></li>
+                                    <li><a routerLink="/interior">Interior Offices</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/news">NEWS</a>
+                                <a routerLink="/news">NEWS</a>
                             </li>
                             <li>
-                                <a href="/package">All packages</a>
+                                <a routerLink="/package">All packages</a>
                             </li>
-                            <li><a href="/contact">CONTACT</a></li>
-                            <li><a href="/AllCaregories">ALL CATEGORIES</a></li>
+                            <li><a routerLink="/contact">CONTACT</a></li>
+                            <li><a routerLink="/AllCaregories">ALL CATEGORIES</a></li>
          
                             <li style="left: 190px; top: 4px;">
-                                <a href="/ShoppingCart">
+                                <a routerLink="/ShoppingCart">
                                     <i class="pe-7s-cart"></i>
                                    
                                 </a>
                             </li>
-                            <li *ngIf = "!UserInfo; else user">
+                            <li *ngIf ="!user; else userInfo">
                                     
                                 <button (click)="open()" type="button"  class="btn btn-primary sign-in"><a >Log in</a> </button>
                             </li>
-                            <ng-template #user>
+                            <ng-template #userInfo>
                             <li style="float: right; margin-top: 5px;">
 
                                 <div class="row">
                                     <div class="col">
                                       <div ngbDropdown class="d-inline-block">
-                                        <img width="30px" id="dropdownBasic1" ngbDropdownToggle src = "assets/images/profileimg.jpg" alt="user pic">
+                                        <img width="30px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic">
                                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                          <button class="dropdown-item">{{userName['name']}}</button>
+                                          <button class="dropdown-item">{{user['name']}}</button>
                                           <hr>
-                                          <button class="dropdown-item" style="margin-bottom: 10px"><a href="/profile" style="color:black">Profile</a></button>
+                                          <button class="dropdown-item" style="margin-bottom: 10px"><a routerLink="/profile" style="color:black">Profile</a></button>
                                           <button class="dropdown-item" (click) = "logout()">log out</button>
                                         </div>
                                       </div>

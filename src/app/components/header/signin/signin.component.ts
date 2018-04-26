@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
-
+import { UserService } from '../../../services/user.service';
 
 
 
@@ -49,7 +49,8 @@ public form:FormGroup;
               public cookieService: CookieService,
               public router:Router,
 		public modalService: NgbModal,
-		public auth: AuthService,
+    public auth: AuthService,
+    public userService:UserService
   ) { 
     
     
@@ -82,11 +83,17 @@ public form:FormGroup;
         console.log(this.alerts)
         this.authService.signin(this.creds.value).subscribe((res)=>{
           console.log(this.creds.value)
+        this.cookieService.delete('token');
         this.cookieService.set('token',res['success'].token);
+        this.cookieService.delete('lang');
         this.cookieService.set('lang','en');
+        this.cookieService.delete('user');
         this.cookieService.set('user',JSON.stringify(res['user']));
+        this.userService.reloadProfile.emit(true);
         this.activeModal.close();
-        console.log(res);},(err)=>{
+        
+        console.log(res);
+      },(err)=>{
         if(err.status == 401){
         if(parseInt(err['error'].code) === 1){
         this.loginErrors['message'] = 'Incorrect username or password'
