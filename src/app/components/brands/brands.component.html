@@ -8,19 +8,15 @@
                         <div class="category-item">
                             <div class="category-thumb">
                                 <div  class="main-img" [ngStyle] = "{'width.px': '230', 'height.px': '150',   'background': 'white'}">
-                                    <a href="/brandPage">
+                                    <a routerLink ="/brandPage" >
                                         <img  [ngStyle] = "{'width.px': '230', 'height.px': '150', 'background': 'white'}" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
                                     </a>
                                 </div>
-                                <div class="overlay-img">
-                                    <a href="/brandPage">
-                                        <img [ngStyle] = "{'width.px': '230', 'height.px': '150'}" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
-                                    </a>
-                                </div>
+                                
                             </div>
                            
                         </div>
- <h4 [ngStyle] = "{'text-align': 'center'}" class="brand-name"><a href="/brandPage">{{brand['brand_name']}}</a></h4>
+ <h4 [ngStyle] = "{'text-align': 'center'}" class="brand-name"><a routerLink = "/brandPage">{{brand['brand_name']}}</a></h4>
         </div>
     </div>
     </ngx-slick>

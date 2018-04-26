@@ -14,7 +14,7 @@ packages: any;
   public router: Router,
   public productService: ProductService) { 
     this.packageService.get({}).subscribe((res)=>{
-      this.packages = res['data'];
+      this.packages = res['data']['packages'];
       console.log(this.packages);
    });
   }

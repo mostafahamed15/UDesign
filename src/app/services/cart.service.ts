@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UrlService } from './url.service';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Rx';
 import {CookieService} from 'ngx-cookie-service';
 @Injectable()
 export class CartService {
@@ -16,6 +16,7 @@ export class CartService {
 	}
 
 	public getCart(){
+		
 		return new Observable(observer=>{
   
 	
@@ -175,9 +176,6 @@ export class CartService {
 
   }
   
-//   public changeCart(count){
-//     this.count  += count;
-//     console.log(this.count)
-//   }
+
 
 }

@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit {
   constructor(private postsService:PostsService) { 
   	      this.postsService.topPosts().subscribe(res => {
         this.posts = res['data'];
-        console.log('work as dangerious')
+        console.log('work as dangerious');
       },err => console.log(err));
 
   }

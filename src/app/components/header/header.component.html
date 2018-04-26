@@ -34,7 +34,7 @@
                             <li><a routerLink="/contact">CONTACT</a></li>
                             <li><a routerLink="/AllCaregories">ALL CATEGORIES</a></li>
          
-                            <li style="left: 190px; top: 4px;">
+                            <li style="left: 190px; top: 4px; margin: 0;">
                                 <a routerLink="/ShoppingCart">
                                     <i class="pe-7s-cart"></i>
                                    
@@ -48,14 +48,15 @@
                             <li style="float: right; margin-top: 5px;">
 
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col" style="margin-top: -14px;">
                                       <div ngbDropdown class="d-inline-block">
                                         <img width="30px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic">
-                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                          <button class="dropdown-item">{{user['name']}}</button>
+                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1"  class="sub-menu" style="height:200px ;" >
+                                          <a>{{user['name']}}</a>
                                           <hr>
-                                          <button class="dropdown-item" style="margin-bottom: 10px"><a routerLink="/profile" style="color:black">Profile</a></button>
-                                          <button class="dropdown-item" (click) = "logout()">log out</button>
+                                          <a routerLink="/profile">Profile</a>
+                                          <hr>
+                                          <a (click) = "logout()">log out</a>
                                         </div>
                                       </div>
                                     </div>
