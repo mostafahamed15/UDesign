@@ -94,7 +94,7 @@ const ROUTES: Routes = [
      {path:'brandPage',component:BrandPageComponent},
      {path: 'finishingOffice', component:FinishingOfficeComponent},
      {path: 'interiorOffice', component:InteriorOfficeComponent},
-  {path:'profile',component: ProfilePageComponent},
+  {path:'profile',component: ProfilePageComponent,canActivate:[AuthGuard]},
   // {path:'checkout',component: CartComponent},
   // {path:'cart',component: Cart2Component},
   {path:'products',component: ItemsComponent},
@@ -108,7 +108,7 @@ const ROUTES: Routes = [
   {path:'Subcat',component: SubcatComponent},
   {path:'categories/:id/products',component: ProductByCategoriesComponent},
   {path: 'Package/:id', component:PackageWithProductComponent},
-  {path: 'profile/edit', component: EditProfileComponent}
+  {path: 'profile/edit', component: EditProfileComponent,canActivate:[AuthGuard]},
   // {path:'product/:id',component: SingleproductComponent},
 
 ];

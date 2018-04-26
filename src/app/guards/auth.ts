@@ -9,9 +9,11 @@ export class AuthGuard implements CanActivate {
 
 	}
 	canActivate() {
-		if(this.cookieService.get('token')){
+		let token = this.cookieService.get('token');
+		if(token && token !== 'undefined'){
 			return true;
 		}
+		this.router.navigateByUrl('/');
 		return false;
 	}
 }

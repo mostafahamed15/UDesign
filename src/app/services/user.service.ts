@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { UrlService } from './url.service';
+import { CookieService } from "ngx-cookie-service";
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
@@ -8,7 +9,8 @@ export class UserService {
   public reloadProfile:EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private UrlService: UrlService,
-  private http:HttpClient ) { }
+  private http:HttpClient,
+  private cookieService: CookieService ) { }
   getProfile(){
     return this.http.get(this.UrlService.getApiUrl() + 'profile');
   }
@@ -18,6 +20,15 @@ export class UserService {
   getLikes(){
     return this.http.get(this.UrlService.getApiUrl() + 'likes');
   }
+  isLogedIn(){
+    let token = this.cookieService.get('token');
+		if(token && token !== 'undefined'){
+			return true;
+		}
+		
+		return false;
+	}
+  
   public postedits(data){
     return this.http.post(this.UrlService.getApiUrl() + 'update', data);
   }
