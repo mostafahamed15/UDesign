@@ -56,32 +56,22 @@
                           <div class="product-item">
                               <div class="product-thumb">
                                   <div class="main-img" style="width: 200px; height: 150px">
-                                      <a href="/product">
+                                      <a routerLink="/product">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
                                   <div class="overlay-img">
-                                      <a href="/product">
+                                      <a routerLink="/product">
                                           <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
                                       </a>
                                   </div>
-                                  <a href="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
+                                  <a routerLink="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
                               </div>
-                              <h4 class="product-name"><a href="single-product.html">{{product.name}}</a></h4>
+                              <h4 class="product-name"><a>{{product.name}}</a></h4>
                               <p class="product-price">
                               {{product.lowest_price}} EGP
                               </p>
-                              <div class="group-buttons">
-                                  <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                  <span>Add to Cart</span>
-                                  </button>
-                                  <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                  <i class="pe-7s-repeat"></i>
-                                  </button>
-                                  <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                  <i class="pe-7s-like"></i>
-                                  </button>
-                              </div>
+                              
                           </div>
                       </div>
                   </div>
@@ -110,25 +100,23 @@
                         <div class="product-item">
                             <div class="product-thumb">
                                 <div class="main-img" style="width: 200px; height: 150px">
-                                    <a href="/product">
-                                        <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
+                                    <a routerLink="/product">
+                                        <img style="width: 200px; height: 150px" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
                                     </a>
                                 </div>
                                 <div class="overlay-img">
-                                    <a href="/product">
-                                        <img style="width: 200px; height: 150px" class="img-responsive" src="{{product.xfeatured_image}}" alt="img" />
+                                    <a routerLink="/product">
+                                        <img style="width: 200px; height: 150px" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
                                     </a>
                                 </div>
-                                <a href="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
+                                <a routerLink="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
                             </div>
-                            <h4 class="product-name"><a href="single-product.html">{{product.name}}</a></h4>
+                            <h4 class="product-name"><a >{{product.name}}</a></h4>
                             <p class="product-price">
                             {{product.lowest_price}} EGP
                             </p>
                             <div class="group-buttons">
-                                <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                <span>Add to Cart</span>
-                                </button>
+                               
                                 <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
                                 <i class="pe-7s-repeat"></i>
                                 </button>

@@ -16,9 +16,9 @@ export class FilterService {
     return this.http.get( this.urlService.getApiUrl() + 'categories');
   }
  getProducts(id){
-   return this.http.get(this.urlService.getApiUrl()+ 'filter/products/' + id);
+   return this.http.get(this.urlService.getApiUrl()+ 'filter/products' + id);
  }
 getPackages(id){
-  return this.http.get(this.urlService.getApiUrl() + 'filter/packages/' + id)
+  return this.http.get(this.urlService.getApiUrl() + 'filter/packages' + id)
 }
 }
