@@ -97,7 +97,7 @@
                 </div>
                 <div class="box-product row">
                     <div *ngFor="let product of product1" class="col-md-4 col-sm-6">
-                        <div class="product-item">
+                        <div class="product-item" *ngIf="product">
                             <div class="product-thumb">
                                 <div class="main-img" style="width: 200px; height: 150px">
                                     <a routerLink="/product">
@@ -109,7 +109,7 @@
                                         <img style="width: 200px; height: 150px" class="img-responsive" src="{{product['xfeatured_image']}}" alt="img" />
                                     </a>
                                 </div>
-                                <a routerLink="/product/{{product.id}}" class="details"><i class="pe-7s-search"></i></a>
+                                <a routerLink="/product/{{product['id']}}" class="details"><i class="pe-7s-search"></i></a>
                             </div>
                             <h4 class="product-name"><a >{{product.name}}</a></h4>
                             <p class="product-price">

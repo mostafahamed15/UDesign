@@ -38,6 +38,29 @@ export class ItemsComponent implements OnInit {
     public categoryService: CategoryService,
   public brandService: BrandService,
   public filterService:FilterService ) {
+
+//omars edits
+
+	this.filterService.getBrands().subscribe((res:any[])=>{
+      let data:any[]=res['data']['brands'];
+       data.map(item=>{
+        item.checked = false;
+       this.brands['brands'].push(item)
+      });
+  	},err=>{
+
+  	});
+   this.filterService.getCategories().subscribe((res)=>{
+       let data:any[]=res['data']['categories'];
+       data.map(item=>{
+        item.checked = false;
+        this.categories['categories'].push(item)
+      });
+    },err=>{
+
+    });
+
+//omars edits
     this.productService.index().subscribe(res => {
       this.products = res['data']['products'];
       console.log(this.products);
