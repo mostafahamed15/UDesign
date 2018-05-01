@@ -26,18 +26,18 @@
                             <div class="product-item">
                                 <div (click)="child(top)" class="product-thumb">
                                     <div class="main-img" style="width: 200px; height: 150px">
-                                        <a href="/Subcat">
+                                        <a routerLink ="/subcat">
                                             <img style="width: 200px; height: 150px" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
                                         </a>
                                     </div>
                                     <div class="overlay-img">
-                                        <a href="/Subcat">
+                                        <a routerLink="/subcat">
                                             <img style="width: 200px; height: 150px" class="img-responsive" src="{{top['xfeatured_image']}}" alt="img" />
                                         </a>
                                     </div>
-                                    <a href="/Subcat" class="details"><i class="pe-7s-search"></i></a>
+                                    <a routerLink="/subcat" class="details"><i class="pe-7s-search"></i></a>
                                 </div>
-                                <h4 class="product-name"><a href="/Subcat">{{top.category_name}}</a></h4>
+                                <h4 class="product-name"><a routerLink="/subcat">{{top.category_name}}</a></h4>
                                 <p class="product-price">
                                 {{top.category_name}}
                                 </p>

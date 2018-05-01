@@ -6,12 +6,22 @@ import { RouterModule, Router } from '@angular/router';
 import { count } from 'rxjs/operators';
 import { BrandService } from '../../services/brand.service';
 import { FilterService } from '../../services/filter.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  sum = 1;
+  throttle = 10;
+  scrollDistance = 1;
+  public hasMore:boolean=true;
+  public last;
+  
+  public title;
+	public keyword:string='';
   flag = false;
   public products:any[] =[];
   public product1:any[] =[];
@@ -25,7 +35,6 @@ export class ItemsComponent implements OnInit {
   public categoriesfilter: any;
   public categories: any[] = [];
   public brands: any[] =[];
-  public last: any;
   filters:object = {
     brands:[],
     prices:[],
@@ -38,18 +47,11 @@ export class ItemsComponent implements OnInit {
     public categoryService: CategoryService,
   public brandService: BrandService,
   public filterService:FilterService ) {
+    this.addItems(0, this.sum);
 
 //omars edits
 
-	this.filterService.getBrands().subscribe((res:any[])=>{
-      let data:any[]=res['data']['brands'];
-       data.map(item=>{
-        item.checked = false;
-       this.brands['brands'].push(item)
-      });
-  	},err=>{
 
-  	});
    this.filterService.getCategories().subscribe((res)=>{
        let data:any[]=res['data']['categories'];
        data.map(item=>{
@@ -61,11 +63,12 @@ export class ItemsComponent implements OnInit {
     });
 
 //omars edits
-    this.productService.index().subscribe(res => {
-      this.products = res['data']['products'];
-      console.log(this.products);
-      console.log(this.filters);
-    },err => console.log(err));
+    // this.productService.index().subscribe(res => {
+    //   this.products = res['data']['products'];
+    //   this.last = res['data']['last'];
+    //   console.log(this.products);
+    //   console.log(this.filters);
+    // },err => console.log(err));
     this.categoryService.getTop().subscribe(res => {
       this.categories = res['data'];
       console.log(this.categories);
@@ -101,7 +104,26 @@ this.filterService.getProducts('id').subscribe(res => {
 
   }
 
-    
+  getProducts(){
+    this.productService.get({last:this.last}).subscribe((res)=>{
+      
+      if(res['data'] ['products'].length < 1){ this.hasMore = false}
+      res['data'] ['products'].map((product)=>{
+        this.products.push(product);
+      });
+    this.title = 'Products';
+      this.last = res['data']['last'];
+      console.log(this.last)
+
+      console.log(this.products)
+   });
+   (err)=>{
+      console.log(err)
+   }
+
+  }
+
+ 
    
   ngOnInit() {
    
@@ -109,10 +131,12 @@ this.filterService.getProducts('id').subscribe(res => {
   
   
   toggleFilters(name,id){
+
     this.flag = true;
     for(let i =0 ; i<=5 ; i++){
       if(this.products[i].brand_id === id){
         this.product1[i] = this.products[i];
+        
       // console.log(this.products[i]);
       
       }
@@ -120,10 +144,23 @@ this.filterService.getProducts('id').subscribe(res => {
     console.log(this.product1);
     
    }
-
-
+  
   product(id){
     this.router.navigateByUrl('product/' + id);
+  }
+
+  addItems(startIndex, endIndex) {
+    for (let i = 0; i < this.sum; ++i) {
+      this.product1.push(this.product1);
+    }
+  }
+  onScrollDown () {
+    console.log('scrolled!!');
+
+    // add another 20 items
+    const start = this.sum;
+    this.sum += 1;
+    this.addItems(start, this.sum);
   }
  
 

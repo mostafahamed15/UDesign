@@ -53,7 +53,7 @@
                   </div>
                   <div class="box-product row">
                       <div *ngFor="let product of products" class="col-md-4 col-sm-6">
-                          <div class="product-item">
+                          <div class="product-item" *ngIf="product['last']!= last">
                               <div class="product-thumb">
                                   <div class="main-img" style="width: 200px; height: 150px">
                                       <a routerLink="/product">
@@ -77,7 +77,12 @@
                   </div>
                  
               </div>
-              
+              <div class="search-results"
+              infiniteScroll
+              [infiniteScrollDistance]="2"
+              [infiniteScrollThrottle]="last"
+              (scrolled)="getProducts()">
+          </div>
           </div>
           <ng-template #filter>
           <div class="col-md-9" >
@@ -97,7 +102,7 @@
                 </div>
                 <div class="box-product row">
                     <div *ngFor="let product of product1" class="col-md-4 col-sm-6">
-                        <div class="product-item" *ngIf="product">
+                        <div class="product-item" *ngIf="product['xfeatured_image'] ">
                             <div class="product-thumb">
                                 <div class="main-img" style="width: 200px; height: 150px">
                                     <a routerLink="/product">
@@ -127,7 +132,13 @@
                         </div>
                     </div>
                 </div>
-               
+                <div class="search-results"
+                infinite-scroll
+                [infiniteScrollDistance]="scrollDistance"
+                [infiniteScrollThrottle]="throttle"
+                [fromRoot]="true"
+                (scrolled)="onScrollDown()">
+            </div>
             </div>
             
         </div>

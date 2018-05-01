@@ -77,6 +77,7 @@ import { SubcatComponent } from './pages/all-caregories/subcat/subcat.component'
 import { ProductByCategoriesComponent } from './pages/product-by-categories/product-by-categories.component';
 import { PackageWithProductComponent } from './components/package/package-with-product/package-with-product.component';
 import { EditProfileComponent } from './pages/profile-page/edit-profile/edit-profile.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
 
 
@@ -168,6 +169,7 @@ const ROUTES: Routes = [
     NgbModule,
     SlickModule.forRoot(),
     CarouselModule,
+    InfiniteScrollModule,
     
     
     TranslateModule.forRoot({

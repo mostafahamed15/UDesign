@@ -1,6 +1,6 @@
 <div class="main">
   <div class="container">
-      <div class="header-page">
+      <div class="header-page" style="margin-top: 30px;">
           <h1>SHOPPING CART</h1>
       </div>
       <!-- /.header-page -->
@@ -28,17 +28,17 @@
                       <tbody *ngIf="shoppingCart else loading">
                           <tr class="cart_item" *ngFor="let product of shoppingCart" >
                               <td class="product-remove"><a href="#" class="remove"><i class="fa fa-times"></i></a></td>
-                              <td class="product-thumbnail">
+                              <td class="product-thumbnail" style="width: 250px">
                                   <a routerLink="/product">
-                                      <img class="img-responsive" src="{{product.details.xfeatured_image}}" alt="img" />
+                                      <img style="width: 250px" class="img-responsive" src="{{product['details']['xfeatured_image']}}" alt="img" />
                                   </a>
                               </td>
                               <td class="product-name">
                                   <a href="single-product.html">
-                                      COAT WITH WOOL WRAPAROUND COLLAR
+                                    {{product['details']['description']}}
                                   </a>
                               </td>
-                              <td class="product-price"><span class="amount">700USD</span></td>
+                              <td class="product-price"><span class="amount">{{product['price']}} LE</span></td>
                               <td class="product-quantity">
                                   <div class="quantity">
                                       <button class="minus-btn"><i class="fa fa-minus"></i></button>
@@ -46,7 +46,7 @@
                                       <button class="plus-btn"><i class="fa fa-plus"></i></button>
                                   </div>
                               </td>
-                              <td class="product-subtotal"><span class="amount">700USD</span></td>
+                              <td class="product-subtotal"><span class="amount">{{product['price']}} LE</span></td>
                           </tr>
                           <tr class="cart-action">
                               <td colspan="3">
@@ -70,7 +70,7 @@
                   <div class="col-md-6">
                       <div class="shop-shipping">
                           <h3>CALCULATE SHIPPING</h3>
-                          <select class="custom-select">
+                          <select class="custom-select" style="margin-bottom: 10px; border-radius: 20px; padding: 10px 0; ">
                               <option value="AF">Afghanistan</option>
                               <option value="AX">Åland Islands</option>
                               <option value="AL">Albania</option>
