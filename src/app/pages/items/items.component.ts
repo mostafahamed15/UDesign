@@ -47,7 +47,7 @@ export class ItemsComponent implements OnInit {
     public categoryService: CategoryService,
   public brandService: BrandService,
   public filterService:FilterService ) {
-    this.addItems(0, this.sum);
+    
 
 //omars edits
 
@@ -149,19 +149,7 @@ this.filterService.getProducts('id').subscribe(res => {
     this.router.navigateByUrl('product/' + id);
   }
 
-  addItems(startIndex, endIndex) {
-    for (let i = 0; i < this.sum; ++i) {
-      this.product1.push(this.product1);
-    }
-  }
-  onScrollDown () {
-    console.log('scrolled!!');
-
-    // add another 20 items
-    const start = this.sum;
-    this.sum += 1;
-    this.addItems(start, this.sum);
-  }
+ 
  
 
 }

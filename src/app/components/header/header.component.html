@@ -1,4 +1,4 @@
-
+<!-- 
         
         <header style="height: 100px;     background-color: rgba(32,95,118,.7);
     z-index: 10; position: fixed; width: 100%;">
@@ -10,7 +10,7 @@
                 </a>
                            
                     <div class="minimal-menu">
-                        <ul class="menu">
+                        <ul>
   
                             <li class="current-menu-item">
                                 <a routerLink="/home">HOME</a>
@@ -34,11 +34,16 @@
                             <li><a routerLink="/contact">CONTACT</a></li>
                             <li><a routerLink="/allCaregories">ALL CATEGORIES</a></li>
          
-                            <li style="left: 190px; top: 4px; margin: 0;">
-                                <a routerLink="/shoppingCart">
+                            <li style="left: 100px; top: 6px; margin: 0;">
+                                <!-- <a routerLink="/shoppingCart">
                                     <i class="pe-7s-cart"></i>
-                                   
-                                </a>
+                                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                </a> -->
+                               <!-- <a routerLink="/shoppingCart"><i class="pe-7s-cart"></i>cart</a>
+                                <ul class="sub-menu" style="height:70px ;">
+                                    <li ><a routerLink="/finishing">Finishing Offices</a></li>
+                                    <li ><a routerLink="/interior">Interior Offices</a></li>
+                                </ul>
                             </li>
                             <li *ngIf ="!user; else userInfo">
                                     
@@ -47,10 +52,10 @@
                             <ng-template #userInfo>
                             <li style="float: right; margin-top: 5px;">
 
-                                <div class="row">
-                                    <div class="col" style="margin-top: -14px;">
+                                <div class="row" style="position: absolute; right:100px ;" >
+                                    <div class="col" >
                                       <div ngbDropdown class="d-inline-block">
-                                        <img width="30px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic">
+                                        <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic" >
                                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1"  class="sub-menu" style="height:200px ;" >
                                           <a>{{user['name']}}</a>
                                           <hr>
@@ -66,8 +71,85 @@
                         </ul>
                     </div>
                     <!-- /.minimal-menu -->
-                </nav>
+                <!-- </nav> -->
                 <!-- /.main-nav -->
-            </div>
+           <!-- </div>
         </header>
-        
+         -->
+         <nav class="navbar navbar-expand-sm bg-dark ">
+                <!-- Brand -->
+                <a class="navbar-brand" routerLink="/home">
+                        <img width="90px" src="assets/images/logo.png" alt="img" style="margin-right: 100px; margin-top: -28px;" />
+                </a>
+              
+                <!-- Links -->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/products">All Products</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                        <div class="row">
+                                <div class="col">
+                                  <div ngbDropdown class="d-inline-block">
+                                    <a class="nav-link offices" id="dropdownBasic1" ngbDropdownToggle>Offices</a>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                      <button class="dropdown-item" routerLink="/finishing">Finishing Offices</button>
+                                      <button class="dropdown-item" routerLink="/interior" >Interior Offices</button>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" routerLink="/news">News</a>
+                          </li>
+                          <li class="nav-item">
+                                <a class="nav-link" routerLink="/package">All Packages</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" routerLink="/allCaregories">All Categories</a>
+                                  </li>
+                                  <li *ngIf ="!user; else userInfo">
+                                    
+                                        <button (click)="open()" type="button"  class="btn btn-primary caretLogo"><a >Log in</a> </button>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                            <div class="row">
+                                                    <div class="col">
+                                                      <div ngbDropdown class="d-inline-block caretLogo">
+                                                            <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "./assets/images/cart-icon-2.png" alt="user pic" >
+                                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                          <button class="dropdown-item">Action - 1</button>
+                                                          <button class="dropdown-item">Another Action</button>
+                                                          <button class="dropdown-item">Something else is here</button>
+                                                          <hr>
+                                                          <button class="dropdown-item" routerLink="/shoppingCart">view cart</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    </div>
+                                          </li>
+                  <!-- Dropdown -->
+                  <ng-template #userInfo>
+                  <li class="nav-item dropdown">
+                        <div class="row">
+                                <div class="col">
+                                  <div ngbDropdown class="d-inline-block caretLogo">
+                                        <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic" >
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                      <button class="dropdown-item">{{user['name']}}</button>
+                                      <button class="dropdown-item"  routerLink="/profile">Profile</button>
+                                      <button class="dropdown-item" (click) = "logout()">log out</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                        
+                  </li>
+                </ng-template>
+                </ul>
+              </nav>
