@@ -7,6 +7,7 @@ import { CartService } from '../../services/cart.service';
 import { UserService } from '../../services/user.service';
 import { SigninComponent } from './signin/signin.component';
 import { count } from 'rxjs/operators';
+import {} from '@angular/core';
 
 
 
@@ -16,6 +17,7 @@ import { count } from 'rxjs/operators';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public isCollapsed: boolean;
   public isLogged:boolean=false;
   public user:object=null;
   public cartNumber: any;
@@ -38,6 +40,7 @@ export class HeaderComponent implements OnInit {
     public userService:UserService,
     public cartService: CartService
   ){
+    this.isCollapsed = true;
     this.fetchCart();
     let token = this.cookieService.get('token');
 

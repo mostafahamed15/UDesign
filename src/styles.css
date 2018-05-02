@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.cart{
+    position: absolute !important;
+    left: -1000px !important;
+    width: 1000px;
+}
