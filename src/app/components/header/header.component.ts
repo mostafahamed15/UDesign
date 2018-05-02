@@ -23,6 +23,14 @@ export class HeaderComponent implements OnInit {
   color;
   size;
   qty;
+  
+  cookieinfo;
+  public shoppingCart;
+  public carts:any;
+  product;
+  public cartLast: any ;
+  
+  counter=0;
   constructor(public router:Router,
 		public modalService: NgbModal,
 		public cookieService: CookieService,
@@ -30,7 +38,8 @@ export class HeaderComponent implements OnInit {
     public userService:UserService,
     public cartService: CartService
   ){
-      let token = this.cookieService.get('token');
+    this.fetchCart();
+    let token = this.cookieService.get('token');
 
       if (token && token !== 'undefined'){
         this.loadProfile();
@@ -48,6 +57,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.userService.reloadProfile.subscribe(res=>{
       this.loadProfile();
+      console.log(this.cartLast);
     });
   }
   cart(count: number){
@@ -62,5 +72,37 @@ export class HeaderComponent implements OnInit {
    this.cookieService.delete('user');
    this.userService.reloadProfile.emit(true);
   }
+ 
+ 
+   
+    fetchCart(){
+      this.cartService.getCart().subscribe((res: ShoppingCart)=>{
+        // console.log(res);
+        this.shoppingCart = res.products;
+        
+        console.log('shoppingCart',this.shoppingCart)
+      });
+    }
   
+    // open() {
+    //   const modalRef = this.modalService.open(TryPremiumComponent);
+    //   modalRef.componentInstance.name = 'World';
+    // }
+   
+    PlusCounter(){
+      console.log(this.counter);
+      this.counter+=1
+    }
+    MinusCounter(){
+      console.log(this.counter);
+      this.counter-=1
+    }
+  
+}
+interface ShoppingCart{
+  products:Products[]
+}
+
+interface Products{
+  brand_id:number
 }
