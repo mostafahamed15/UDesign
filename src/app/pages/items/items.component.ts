@@ -62,13 +62,7 @@ export class ItemsComponent implements OnInit {
 
     });
 
-//omars edits
-    // this.productService.index().subscribe(res => {
-    //   this.products = res['data']['products'];
-    //   this.last = res['data']['last'];
-    //   console.log(this.products);
-    //   console.log(this.filters);
-    // },err => console.log(err));
+
     this.categoryService.getTop().subscribe(res => {
       this.categories = res['data'];
       console.log(this.categories);

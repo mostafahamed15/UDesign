@@ -3,6 +3,7 @@
     position: absolute !important;
     left: -500px !important;
     width: 500px;
+    z-index: 9 !important;
 }
 .dropdown-item.active, .dropdown-item:active{
   background-color:#517d8d !important;

@@ -128,8 +128,8 @@
                                                       <div ngbDropdown class="d-inline-block caretLogo ">
                                                             <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "./assets/images/cart-icon-2.png" alt="user pic" >
                                                             
-                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngIf="shoppingCart else loading" class="cart">
-                                                                <form action="#" class="shop-form">
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1"  class="cart">
+                                                                <form action="#" class="shop-form" *ngIf="shoppingCart else empty">
                                                                         <div class="table-responsive">
                                                                             <table class="shop-table table" cellspacing="0">
                                                                                 <thead>
@@ -166,7 +166,7 @@
                                                                                         <td class="product-quantity">
                                                                                             <div class="quantity">
                                                                                                 <button class="minus-btn"><i class="fa fa-minus"></i></button>
-                                                                                                <input type="text" value="1" />
+                                                                                                <input type="text" value="1" style="width: 20%" />
                                                                                                 <button class="plus-btn"><i class="fa fa-plus"></i></button>
                                                                                             </div>
                                                                                         </td>
@@ -176,11 +176,16 @@
                                                                                     </table>
                                                                                     </div>
                                                                                     </form>
+                                                                                    <ng-template #empty>
+                                                                                        <p>Empty</p>
+                                                                                    </ng-template>
                                                                                     
                                                           <hr>
                                                           <button class="dropdown-item" routerLink="/shoppingCart" routerLinkActive = "active" style="text-align: center">view cart</button>
                                                         </div>
+                                                      
                                                       </div>
+                                                      
                                                     </div>
                                                     </div>
                                           </li>

@@ -15,10 +15,10 @@ export class ShoppingCartComponent implements OnInit {
   cookieinfo;
   public shoppingCart;
   public carts:any;
-  product;
-  color;
-  size;
-  qty;
+  public product;
+  public color;
+  public size;
+  public qty;
   counter=0;
  public cartLast: any ;
     constructor(public cartService: CartService,
@@ -27,26 +27,26 @@ export class ShoppingCartComponent implements OnInit {
     ){
     
       this.fetchCart();
+      
+    
     }
 
     fetchCart(){
       this.cartService.getCart().subscribe((res: ShoppingCart)=>{
         // console.log(res);
-        this.shoppingCart = res.products;
-        
-        console.log('shoppingCart',this.shoppingCart)
+        this.shoppingCart = res['products'];
+       
+        console.log('shoppingCart',this.shoppingCart);
+       
       });
     }
-  
-    // open() {
-    //   const modalRef = this.modalService.open(TryPremiumComponent);
-    //   modalRef.componentInstance.name = 'World';
-    // }
+   
     ngOnInit() {
       console.log(this.cartLast);
 
 
     }
+  
     PlusCounter(){
       console.log(this.counter);
       this.counter+=1
@@ -64,3 +64,5 @@ export class ShoppingCartComponent implements OnInit {
   interface Products{
     brand_id:number
   }
+
+ 

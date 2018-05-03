@@ -55,7 +55,7 @@ private response:ProductResponse;
 public product:object;
 private currentSize:number;
 private currentColor:number;
-public counter:number = 0;
+public counter:number = 1;
 public size: any;
 constructor(
   private productService:ProductService,
@@ -98,6 +98,8 @@ constructor(
       this.counter = this.getQty();
     });
   }
+  this.PlusCounter();
+  this.MinusCounter();
 }
 public addToWishList(id){
   this.productService.addToWishList(id).subscribe(res=>{
