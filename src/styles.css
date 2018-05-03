@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 .cart{
     position: absolute !important;
-    left: -1000px !important;
-    width: 1000px;
+    left: -500px !important;
+    width: 500px;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color:#517d8d !important;
 }

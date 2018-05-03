@@ -119,14 +119,16 @@
                                   </li>
                                   <li *ngIf ="!user; else userInfo">
                                     
-                                        <button (click)="open()" type="button"  class="btn btn-primary caretLogo"><a >Log in</a> </button>
+                                        <button (click)="open()" type="button"  class="btn btn-default caretLogo"><a >Log in</a> </button>
                                     </li>
+                                    
                                     <li class="nav-item dropdown">
                                             <div  >
                                                     <div  >
                                                       <div ngbDropdown class="d-inline-block caretLogo ">
                                                             <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "./assets/images/cart-icon-2.png" alt="user pic" >
-                                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngIf="shoppingCart else loading" class="cart">
+                                                            
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngIf="shoppingCart else loading" class="cart">
                                                                 <form action="#" class="shop-form">
                                                                         <div class="table-responsive">
                                                                             <table class="shop-table table" cellspacing="0">
@@ -189,7 +191,7 @@
                                 <div >
                                   <div ngbDropdown class="d-inline-block caretLogo">
                                         <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic" >
-                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="z-index: 10">
                                       <button class="dropdown-item">{{user['name']}}</button>
                                       <button class="dropdown-item"  routerLink="/profile" routerLinkActive = "active">Profile</button>
                                       <button class="dropdown-item" (click) = "logout()">log out</button>
