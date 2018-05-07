@@ -17,6 +17,7 @@ import {} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isNavbarCollapsed=true;
   public isCollapsed: boolean;
   public isLogged:boolean=false;
   public user:object=null;
@@ -25,7 +26,7 @@ export class HeaderComponent implements OnInit {
   color;
   size;
   qty;
-  
+  public mobile: boolean;
   cookieinfo;
   public shoppingCart;
   public carts:any;
@@ -62,6 +63,9 @@ export class HeaderComponent implements OnInit {
       this.loadProfile();
       console.log(this.cartLast);
     });
+    if (window.screen.width <=360) { // 768px portrait
+      this.mobile = true;
+    }
   }
   cart(count: number){
     this.cartNumber = this.cartService.count;
