@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import {Router} from '@angular/router';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { CookieService } from 'ngx-cookie-service';
@@ -7,8 +7,9 @@ import { CartService } from '../../services/cart.service';
 import { UserService } from '../../services/user.service';
 import { SigninComponent } from './signin/signin.component';
 import { count } from 'rxjs/operators';
-import {} from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
+import {Subscription} from 'rxjs/Subscription';
 
 
 @Component({
@@ -17,6 +18,9 @@ import {} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  loaded : boolean = true
+    products : any[];
+    private subscription : Subscription;
   isNavbarCollapsed=true;
   public isCollapsed: boolean;
   public isLogged:boolean=false;
@@ -59,6 +63,14 @@ export class HeaderComponent implements OnInit {
       console.log('loadProfile',this.user);
      }
   ngOnInit() {
+    this.subscription = this
+    .cartService
+    .CartState
+    .subscribe((state : CartState) => {
+        this.products = state.products;
+        console.log(this.products);
+    });
+
     this.userService.reloadProfile.subscribe(res=>{
       this.loadProfile();
       console.log(this.cartLast);
@@ -104,6 +116,11 @@ export class HeaderComponent implements OnInit {
       console.log(this.counter);
       this.counter-=1
     }
+    ngOnDestroy() {
+      this
+          .subscription
+          .unsubscribe();
+  }
   
 }
 interface ShoppingCart{
@@ -113,3 +130,8 @@ interface ShoppingCart{
 interface Products{
   brand_id:number
 }
+export interface CartState {
+	loaded: boolean;
+	products : ProductService[];
+   
+   }

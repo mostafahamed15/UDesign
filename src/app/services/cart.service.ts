@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Http, Response} from '@angular/http';
 import { UrlService } from './url.service';
 import { Observable } from 'rxjs/Rx';
 import {CookieService} from 'ngx-cookie-service';
+import { Subject } from 'rxjs/Subject';
+import { ProductService } from './product.service';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 @Injectable()
 export class CartService {
   private cart:any;
@@ -14,6 +19,9 @@ export class CartService {
 	constructor(private storage: CookieService,private urlService:UrlService, private http:HttpClient) {
 
 	}
+	private cartSubject = new Subject<CartState>();
+	Products : any[];
+    CartState = this.cartSubject.asObservable();
 
 	public getCart(){
 		
@@ -34,6 +42,7 @@ export class CartService {
 
 		
 	}
+
 
 	public cartObject(){
 		return this.cart;
@@ -175,7 +184,30 @@ export class CartService {
 		return this.http.post(this.urlService.getApiUrl()+'order/submit', data)
 
   }
-  
+  addProduct(_product:any) {
+      console.log('in service');
+      this.Products.push(_product)
+      this.cartSubject.next(<CartState>{loaded: true, products:  this.Products});
+    }
+    removeProduct(id:number) {
+      this.Products = this.Products.filter((_item) =>  _item.id !== id )
+      this.cartSubject.next(<CartState>{loaded: false , products:  this.Products});
+    }
+
+  getAllProducts() : Observable <any> {
+    return this
+      .http
+      .get(this.urlService.getApiUrl()+'cart')
+      .map((res : Response) => res.json())
+      .catch((error : any) => Observable.throw('Server error'));
+  }
+
 
 
 }
+
+export interface CartState {
+	loaded: boolean;
+	products : ProductService[];
+   
+   }

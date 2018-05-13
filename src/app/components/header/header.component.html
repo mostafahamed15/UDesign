@@ -29,7 +29,7 @@
                                     
                                     <li><a class="nav-link" routerLink="/allCaregories">ALL CATEGORIES</a></li>
                                     <li><a class="nav-link" routerLink="/contact">CONTACT</a></li>
-                                    <li *ngIf ="!user; else userInfo">
+                                    <li *ngIf ="!user; else userInfo" class="login">
                                     
                                             <button (click)="open()" type="button"  class="btn btn-default "><a >Log in</a> </button>
                                         </li>
