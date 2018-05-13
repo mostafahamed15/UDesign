@@ -8,3 +8,11 @@
 .dropdown-item.active, .dropdown-item:active{
   background-color:#517d8d !important;
 }
+@media screen and (max-width: 768px){
+  .cart{
+    position: absolute !important;
+    left: 0 !important;
+    width: 300px;
+    z-index: 9 !important;
+  }
+}

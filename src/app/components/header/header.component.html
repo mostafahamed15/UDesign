@@ -34,7 +34,7 @@
                                             <button (click)="open()" type="button"  class="btn btn-default "><a >Log in</a> </button>
                                         </li>
                                         <ng-template #userInfo>
-                                    <li class="nav-item dropdown" ngbDropdown>
+                                    <li class="nav-item dropdown res" ngbDropdown>
                                             <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle style="margin-top: -10px"> <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic" ></a>
                                             <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
                                               <a class="dropdown-item" >{{user['name']}}</a>
@@ -43,7 +43,7 @@
                                             </div>
                                           </li>
                                         </ng-template>
-                                          <li class="nav-item dropdown" ngbDropdown>
+                                          <li class="nav-item dropdown res" ngbDropdown>
                                                 <a class="nav-link dropdown-toggle" id="id01"  ngbDropdownToggle><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                                                 <div class="dropdown-menu cart" aria-labelledby="id01" ngbDropdownMenu>
                                                         <form action="#" class="shop-form" *ngIf="shoppingCart else empty">
