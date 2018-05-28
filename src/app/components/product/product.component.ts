@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {ProductService } from '../../services/product.service';
 import {CartService} from '../../services/cart.service';
+import {CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,7 @@ import {CartService} from '../../services/cart.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-
+public related: any;
 public nid:number;
 private id:any;
 private response:ProductResponse;
@@ -21,8 +22,10 @@ public size: any;
 constructor(
   private productService:ProductService,
   private cartService:CartService,
+  private categoryService: CategoryService,
   private route: ActivatedRoute,
   ){
+    this.relatedProducts();
   this.currentSize = 0;
   this.currentColor = 0;
   this.product = {
@@ -66,8 +69,13 @@ public addToWishList(id){
   this.productService.addToWishList(id).subscribe(res=>{
     this.product['is_wish'] = res['data'];
   });
-}
-
+};
+public relatedProducts(){
+  this.categoryService.getTop().subscribe(res=>{
+    this.related = res['data'];
+    console.log('related products');
+  });
+};
 public count(qty) {
   let quantity = this.product['all_sizes'][0].quantity
   console.log(quantity);
