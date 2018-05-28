@@ -1,15 +1,14 @@
 .carousel{
     
     width: 80%;
-    margin-left: 20px;
+    margin: 0 auto;
    
 }
 @media screen and (min-width: 1100px){
     .carousel{
     
         width: 80%;
-        margin-left: 150px;
-       
+        margin: 0 auto;
     }
 }
 
