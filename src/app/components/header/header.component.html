@@ -6,20 +6,14 @@
                           <span class="navbar-toggler-icon"></span>
                         </button>
                         <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
-                          <ul class="navbar-nav mr-auto">
+                          <ul class="navbar-nav mr-auto center">
                                 <li>
                                         <a class="nav-link" routerLink="/home">HOME</a>
                                     </li>
                                     <li>
                                             <a class="nav-link" routerLink="/products">ALL PRODUCTS</a>
                                         </li>
-                            <li class="nav-item dropdown" ngbDropdown>
-                              <a class="nav-link dropdown-toggle" id="id01"  ngbDropdownToggle>OFFICES</a>
-                              <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-                                <a class="dropdown-item" routerLink="/finishing">Finishing Offices</a>
-                                <a class="dropdown-item" routerLink="/interior">Interior Offices</a>
-                              </div>
-                            </li>
+                            
                             <li>
                                     <a class="nav-link" routerLink="/news">NEWS</a>
                                 </li>
@@ -29,6 +23,13 @@
                                     
                                     <li><a class="nav-link" routerLink="/allCaregories">ALL CATEGORIES</a></li>
                                     <li><a class="nav-link" routerLink="/contact">CONTACT</a></li>
+                                    <li class="nav-item dropdown" ngbDropdown>
+                                        <a class="nav-link dropdown-toggle" id="id01"  ngbDropdownToggle>OFFICES</a>
+                                        <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+                                          <a class="dropdown-item" routerLink="/finishing">Finishing Offices</a>
+                                          <a class="dropdown-item" routerLink="/interior">Interior Offices</a>
+                                        </div>
+                                      </li>
                                     <li *ngIf ="!user; else userInfo" class="login">
                                     
                                             <button (click)="open()" type="button"  class="btn btn-default "><a >Log in</a> </button>
