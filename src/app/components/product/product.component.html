@@ -72,28 +72,28 @@
                     <div class="showcase">
                         <div class="row">
                             <div class="box-product">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item has-deal">
+                                <div class="col-lg-3 col-md-4 col-sm-6" routerLink="/product/{{product['id']}}">
+                                    <div class="product-item has-deal" *ngFor="let relates of related">
                                         <div class="product-thumb">
                                             <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
+                                                <a routerLink="/product/{{product['id']}}">
+                                                    <img class="img-responsive" src="{{relates['xfeatured_image']}}" alt="img" />
                                                 </a>
                                             </div>
                                             <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
+                                                <a routerLink="/product/{{product['id']}}">
+                                                    <img class="img-responsive" src="{{relates['xfeatured_image']}}"  alt="img" />
                                                 </a>
                                             </div>
                                             <div class="countdown" data-time="2015/09/06"></div>
                                             <div class="product-new">
                                                 NEW
                                             </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                                            <a routerLink="/product/{{product['id']}}" class="details"><i class="pe-7s-search"></i></a>
                                         </div>
-                                        <h4 class="product-name"><a href="single-product.html">UTILITY JACKET</a></h4>
+                                        <h4 class="product-name"><a routerLink="/product/{{product['id']}}">UTILITY JACKET</a></h4>
                                         <p class="product-price">
-                                        {{product['lowest_price']}}LE
+                                        {{relates['lowest_price']}}LE
                                         </p>
                                         <div class="group-buttons">
                                             <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
@@ -108,114 +108,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">HOODED BOMBER JACKET</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">STRUCTURED COLLARLESS COAT</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <div class="main-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="overlay-img">
-                                                <a href="single-product.html">
-                                                    <img class="img-responsive" src="assets/images/product-img-9.jpg" alt="img" />
-                                                </a>
-                                            </div>
-                                            <div class="product-sale">
-                                                -25%
-                                            </div>
-                                            <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
-                                        </div>
-                                        <h4 class="product-name"><a href="single-product.html">COAT WITH WRAPAROUND COLLAR</a></h4>
-                                        <p class="product-price">
-                                        <ins><span class="amount">100.99 USD</span></ins>
-                                        <del><span class="amount">189.99 USD</span></del>
-                                        </p>
-                                        <div class="group-buttons">
-                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                            <span>Add to Cart</span>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
-                                            <i class="pe-7s-repeat"></i>
-                                            </button>
-                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                            <i class="pe-7s-like"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+             
+                   
+                                
                             </div>
                         </div>
                     </div>
