@@ -1,18 +1,123 @@
 <div class="content-profile-page">
   <div class="profile-user-page card">
-     <div class="img-user-profile">
-       <img class="profile-bgHome" src="https://37.media.tumblr.com/88cbce9265c55a70a753beb0d6ecc2cd/tumblr_n8gxzn78qH1st5lhmo1_1280.jpg" />
-       <img class="avatar" src="http://gravatar.com/avatar/288ce55a011c709f4e17aef7e3c86c64?s=200" alt="jofpin"/>
+     <div class="img-user-profile" style="widows: 100% !important;">
+       <img class="profile-bgHome" src="{{userinfo['xcover_photo']}}" />
+       <img class="avatar" src="{{userinfo['ximage']}}" alt="jofpin"/>
+      
           </div>
-         <button>Follow</button>
+         
          <div class="user-profile-data">
-           <h1>Adam Samer</h1>
-<!--             <p>github.com/jofpin</p>
--->          </div> 
+           <h1>{{userinfo['name']}}</h1>
+          </div> 
          <div class="description-profile">I love udesign </div>
-      <ul class="data-user">
-       <li><a><strong>10</strong><span>Wishes</span></a></li>
-       <li><a><strong>13</strong><span>Likes</span></a></li>
-      </ul>
+         <div class="container" >
+         <div class="row">
+             <button  routerLink="/profile/edit" class="btn btn-primary">Edit profile</button>
+            <app-try-premium style="margin-left: 41%"></app-try-premium>
+             </div>
+           </div>
+           <ngb-tabset>
+            <ngb-tab title="likes" >
+              <ng-template ngbTabContent>
+                <div class="box-content">
+                  <div class="showcase">
+                      <div class="row">
+                        <div class="box-product">
+                          <div class="col-lg-12 col-md-6 col-sm-6">
+              <div *ngIf="likes">
+              <div class="product-item col-lg-4"  *ngFor = "let like of likes">
+                <div class="product-thumb">
+                    <div class="main-img" style="width:100%">
+                        <a href="single-product.html">
+                            <img class="img-responsive" style="width: 300px; height: 300px; margin-top: 20px;" src="{{like.product.xfeatured_image}}" alt="img" />
+                        </a>
+                    </div>
+                    <div class="overlay-img" style="width:100%">
+                        <a href="single-product.html">
+                            <img class="img-responsive"  style="width: 200px; height: 300px; margin-top: 20px;" src="{{like.product.xfeatured_image}}" alt="img" />
+                        </a>
+                    </div>
+                    <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                </div>
+                <h4 class="product-name"><a href="single-product.html">{{like.product.name}}</a></h4>
+                <p class="product-price">
+                  {{like.product.updated_at}}
+                </p>
+                <div class="group-buttons">
+                    <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                    <span>Add to Cart</span>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                    <i class="pe-7s-repeat"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                    <i class="pe-7s-like"></i>
+                    </button>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="wishes" >
+              <ng-template ngbTabContent>
+                <div class="box-content">
+                  <div class="showcase">
+                      <div class="row">
+                        <div class="box-product">
+                          <div class="col-lg-12 col-md-6 col-sm-6">
+              <div *ngIf="likes">
+              <div class="product-item col-lg-4"  *ngFor = "let wish of wishes">
+                <div class="product-thumb">
+                    <div class="main-img" style="width:100%">
+                        <a href="single-product.html">
+                            <img class="img-responsive"  style="width: 200px; height: 300px; margin-top: 20px;" src="{{wish.product.xfeatured_image}}" alt="img" />
+                        </a>
+                    </div>
+                    <div class="overlay-img" style="width:100%">
+                        <a href="single-product.html">
+                            <img class="img-responsive"  style="width: 200px; height: 300px; margin-top: 20px;" src="{{wish.product.xfeatured_image}}" alt="img" />
+                        </a>
+                    </div>
+                    <a href="single-product.html" class="details"><i class="pe-7s-search"></i></a>
+                </div>
+                <h4 class="product-name"><a href="single-product.html">{{wish.product.name}}</a></h4>
+                <p class="product-price">
+                  {{wish.product.updated_at}}
+                </p>
+                <div class="group-buttons">
+                    <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                    <span>Add to Cart</span>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                    <i class="pe-7s-repeat"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                    <i class="pe-7s-like"></i>
+                    </button>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        
+              </ng-template>
+            </ngb-tab>
+          
+          </ngb-tabset>
+           
+         
+      
      </div>
    </div>
+  
+   
+   

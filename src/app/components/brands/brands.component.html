@@ -1,32 +1,25 @@
-<!--         <div class="brand-logos" style="margin-top: 70px" >
-            <div class="container" >
-                <div id="carousel-3">
-                    <div *ngFor="let brand of brands; let c = index;">
-                        <img width="40" class="img-responsive" src="{{brand['xbrand_logo']}}" alt="{{brand['brand_name']}}" />
-                    </div>
-                </div>
-            </div>
+
+     <div class="shop-by-categories">
+     <div class="container">
+            <h1 [ngStyle] = "{'color': 'black'}" >Brands</h1>
+     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let brand of brands" class="slide" >
+                    <div class="box-content">
+                        <div class="category-item">
+                            <div class="category-thumb">
+                                <div  class="main-img" [ngStyle] = "{'width': '15vw','height': '15vh',   'background': 'white'}">
+                                    <a routerLink ="/brandPage" >
+                                        <img  [ngStyle] = "{'width': '15vw', 'height': '15vh','background': 'white'}" class="img-responsive" src="{{ brand['xbrand_logo'] }}" alt="img" />
+                                    </a>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+ <h4 [ngStyle] = "{'text-align': 'center'}" class="brand-name"><a routerLink = "/brandPage">{{brand['brand_name']}}</a></h4>
         </div>
-
-
- -->
- <div>
-     <h1 class="brands">Brands</h1>
- <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" style="padding-bottom: 40px;">
-  
-    <div ngxSlickItem *ngFor="let brand of brands" class="slide">
-        <a href = "/brandPage"><img style="color:black; height: 200px;width: 100%" class="img-responsive"  src="{{ brand['xbrand_logo'] }}" alt="{{brand['brand_image']}}" ></a>
-  </div>
-</ngx-slick>
+    </div>
+    </ngx-slick>
 </div>
-<!-- <p-carousel [value]="brand">
-        <ng-template let-brand pTemplate="item">
-           
-                <div  *ngFor="let brand of brands" class="slide">
-                        <div class="ui-grid ui-grid-responsive">
-                        <img style="color:black;height: 70%; width: 70%" class="img-responsive"  src="{{ brand['xbrand_logo'] }}" alt="{{brand['brand_image']}}" >
-                  </div>
-                  </div>
-        </ng-template>
-    </p-carousel>
-     -->
+</div>
+

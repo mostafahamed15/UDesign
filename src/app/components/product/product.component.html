@@ -1,0 +1,125 @@
+<div class="main" style="padding-top: 140px;">
+    <div class="container">
+        <div class="main-content">
+            <div class="product">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images">
+                            <div id="product-showcase">
+                                <div class="gallery">
+                                    <div class="full">
+                                        <img src="{{product['xfeatured_image']}}" />
+                                        <a href="#" class="details"><i class="pe-7s-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <!-- /.breadcrumb -->
+                        <div class="summary">
+                            <h2 class="product-name">{{product['name']}}</h2>
+                            <div class="product-statistic" >
+                                <span class="review-count">{{size['final']}} reviews</span>
+                                <span class="review-star-read star-rating" data-score="4"></span>
+                            </div>
+                            <div class="price">
+                                {{product['lowest_price']}}LE                            </div>
+                            <div class="short-desc">
+                                {{product['description']}}
+                                
+                                
+                            </div>
+                            <div class="product-action">
+                                <div class="clearfix">
+                                    <div class="quantity">
+                                        <button class="minus-btn" (click)="MinusCounter()"><i class="fa fa-minus"></i></button>
+                                        <input type="text"  value="{{counter}}" />
+                                        <button class="plus-btn" (click)="PlusCounter()"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <button type="submit" (click) = "addToCart()" class="add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                                <a  (click)="(addToWishList(product['id']))" class="wishlist-link"><i class="pe-7s-like"></i>ADD TO WISHLIST</a>
+                            </div>
+                            <ul class="ul-product">
+                                <li *ngFor="let size of product['all_sizes']">Size:{{size['final']}}</li>
+                                <li>Brand Name: {{product['brand_name']}}</li>
+                                <li>Categories: <a href="parallax-category-shop.html">Jackets & Coats</a>, <a href="parallax-category-shop.html">Men’s Clothing</a>, <a href="parallax-category-shop.html">Pants & Chinos</a>.</li>
+                                <li>Tags: <a href="parallax-category-shop.html">Shop</a>, <a href="parallax-category-shop.html">Theme</a>, <a href="parallax-category-shop.html">WooCommerce</a>.</li>
+                            </ul>
+                           
+                            <div class="share-this">
+                                <h4>Colors</h4>
+                                <ul class="list-social-2" *ngFor="let color of product['colors']" >
+                                    <li><a [ngStyle]='{"background-color": color["color"]  }'  class="facebook"></a></li>
+                                </ul>
+
+
+
+                                <!-- /.list-social-2 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.product-tabs -->
+            </div>
+            <!-- /.product -->
+            <div class="related-products">
+                <h3>RELATED PRODUCTS</h3>
+                <div class="box-content">
+                    <div class="showcase">
+                        <div class="row">
+                            <div class="box-product">
+                                <div class="col-lg-3 col-md-4 col-sm-6" routerLink="/product/{{product['id']}}">
+                                    <div class="product-item has-deal" *ngFor="let relates of related">
+                                        <div class="product-thumb">
+                                            <div class="main-img">
+                                                <a routerLink="/product/{{product['id']}}">
+                                                    <img class="img-responsive" src="{{relates['xfeatured_image']}}" alt="img" />
+                                                </a>
+                                            </div>
+                                            <div class="overlay-img">
+                                                <a routerLink="/product/{{product['id']}}">
+                                                    <img class="img-responsive" src="{{relates['xfeatured_image']}}"  alt="img" />
+                                                </a>
+                                            </div>
+                                            <div class="countdown" data-time="2015/09/06"></div>
+                                            <div class="product-new">
+                                                NEW
+                                            </div>
+                                            <a routerLink="/product/{{product['id']}}" class="details"><i class="pe-7s-search"></i></a>
+                                        </div>
+                                        <h4 class="product-name"><a routerLink="/product/{{product['id']}}">UTILITY JACKET</a></h4>
+                                        <p class="product-price">
+                                        {{relates['lowest_price']}}LE
+                                        </p>
+                                        <div class="group-buttons">
+                                            <button type="button" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                            <span>Add to Cart</span>
+                                            </button>
+                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                            <i class="pe-7s-repeat"></i>
+                                            </button>
+                                            <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                            <i class="pe-7s-like"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+             
+                   
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <!-- /.related-products -->
+        </div>
+        <!-- /.main-content -->
+    </div>
+</div>

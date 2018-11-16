@@ -11,6 +11,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {AccordionModule} from 'primeng/accordion';     
 import {MenuItem} from 'primeng/api'; 
 import {CarouselModule} from 'primeng/carousel';
+import { NgStyle } from '@angular/common';
 
 //components
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
 import {TranslateLoaderFactory} from './services/translateloader';
 import {TitleService} from './services/title.service';
 import {CategoryService} from './services/category.service';
+import{ FilterService } from './services/filter.service';
 
 import { RequestsInterceptor } from './services/request.service';
 import { UrlService } from './services/url.service';
@@ -44,7 +46,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TrendingComponent } from './components/trending/trending.component';
-import { NewFeaturedTopratedComponent } from './components/new-featured-toprated/new-featured-toprated.component';
+
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ItemsComponent } from './pages/items/items.component';
@@ -59,26 +61,55 @@ import { AdvertisementsComponent } from './components/advertisements/advertiseme
 import { InteriorService } from './services/interior.service';
 import { PackageComponent } from './components/package/package.component';
 import { BrandPageComponent } from './pages/brand-page/brand-page.component';
+import { BrandFeaturesComponent } from './components/brand-features/brand-features.component';
+import { AboutBrandComponent } from './components/about-brand/about-brand.component';
+import { BrandSallesOfComponent } from './components/brand-salles-of/brand-salles-of.component';
+import { BrandByCategoryComponent } from './components/brand-by-category/brand-by-category.component';
+import { FinishingOfficeComponent } from './pages/finishing/finishing-office/finishing-office.component';
+import { InteriorOfficeComponent } from './pages/interior/interior-office/interior-office.component';
+import { ProductComponent } from './components/product/product.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { CheckOutComponent } from './pages/check-out/check-out.component';
+import { TryPremiumComponent } from './pages/profile-page/try-premium/try-premium.component';
+import { CartService } from './services/cart.service';
+import { AllCaregoriesComponent } from './pages/all-caregories/all-caregories.component';
+import { SubcatComponent } from './pages/all-caregories/subcat/subcat.component';
+import { ProductByCategoriesComponent } from './pages/product-by-categories/product-by-categories.component';
+import { PackageWithProductComponent } from './components/package/package-with-product/package-with-product.component';
+import { EditProfileComponent } from './pages/profile-page/edit-profile/edit-profile.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
+
 
 
 const ROUTES: Routes = [
-  // {path:'signup',component:SignupComponent},
+   //{path:'signup',component:SignupComponent},
   // {path:'forgot-passowrd',component:ForgotPasswordComponent},
    //{path:'login',component:SigninComponent},
   // {path:'showdetails/:id',component:DetailsComponent},
   {path:'',component:HomeComponent},
+  {path: 'product/:id', component: ProductComponent},
      {path:'home',component:HomeComponent},
+     {path:'shoppingCart',component:ShoppingCartComponent},
+     {path:'checkOut',component:CheckOutComponent},
      {path:'brandPage',component:BrandPageComponent},
-
-  {path:'profile',component: ProfilePageComponent},
+     {path: 'finishingOffice', component:FinishingOfficeComponent},
+     {path: 'interiorOffice', component:InteriorOfficeComponent},
+  {path:'profile',component: ProfilePageComponent,canActivate:[AuthGuard]},
   // {path:'checkout',component: CartComponent},
   // {path:'cart',component: Cart2Component},
   {path:'products',component: ItemsComponent},
    {path:'interior',component: InteriorComponent},
    {path:'finishing',component: FinishingComponent},
   {path:'news',component: LatestnewsComponent},
-  // {path:'singlepost',component: SinglepostComponent},
+  //{path:'singlepost',component: SinglepostComponent},
   {path:'contact',component: ContactusComponent},
+  {path:'package',component: PackageComponent},
+  {path:'allCaregories',component: AllCaregoriesComponent},
+  {path:'subcat',component: SubcatComponent},
+  {path:'categories/:id/products',component: ProductByCategoriesComponent},
+  {path: 'package/:id', component:PackageWithProductComponent},
+  {path: 'profile/edit', component: EditProfileComponent,canActivate:[AuthGuard]},
   // {path:'product/:id',component: SingleproductComponent},
 
 ];
@@ -92,7 +123,7 @@ const ROUTES: Routes = [
     SliderComponent,
     FooterComponent,
     TrendingComponent,
-    NewFeaturedTopratedComponent,
+    
     CategoriesComponent,
     BlogComponent,
     ItemsComponent,
@@ -106,6 +137,23 @@ const ROUTES: Routes = [
     AdvertisementsComponent,
     PackageComponent,
     BrandPageComponent,
+    BrandFeaturesComponent,
+    AboutBrandComponent,
+    BrandSallesOfComponent,
+    BrandByCategoryComponent,
+    FinishingOfficeComponent,
+    InteriorOfficeComponent,
+    ProductComponent,
+    ShoppingCartComponent,
+    CheckOutComponent,
+    TryPremiumComponent,
+    AllCaregoriesComponent,
+    SubcatComponent,
+    ProductByCategoriesComponent,
+    PackageWithProductComponent,
+    EditProfileComponent,
+  
+   
     
   
   
@@ -121,6 +169,7 @@ const ROUTES: Routes = [
     NgbModule,
     SlickModule.forRoot(),
     CarouselModule,
+    InfiniteScrollModule,
     
     
     TranslateModule.forRoot({
@@ -149,14 +198,16 @@ const ROUTES: Routes = [
     InteriorService,
     FinishingService,
     PackageService,
-    UserService
+    UserService,
+    CartService,
+    FilterService
 
 
   ],
   entryComponents:[
     HeaderComponent,
     
-   
+    TryPremiumComponent,
     AppComponent,
     SigninComponent ],
   bootstrap: [AppComponent]

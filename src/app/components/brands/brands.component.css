@@ -1,17 +1,9 @@
-.brands{
-    color: black !important;
-    text-align: center !important;
-    
+
+.category-item{
+   
+    border-radius: 50%;
 }
-div{
-    background-color: white;
-    margin-bottom: 40px;
-}
-.slide{
-    border: 1px solid black;
-}
-.slide:hover {
-    transform: scale(1.3, 1.3);
-    opacity: 1;
-    background-color: whitesmoke
+.shop-by-categories{
+    padding-top: 20px;
+    background: #c4c4c438;
 }

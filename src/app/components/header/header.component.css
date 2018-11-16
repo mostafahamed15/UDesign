@@ -8,5 +8,60 @@
 .sign-in{
 	position: relative;
     top: -6px;
-	left: 149px;
+	left: 0;
 }
+.navbar{
+	background-color: rgba(32,95,118,.7) !important;
+	margin: 0 !important;
+	z-index: 10; 
+	position: fixed;
+	width: 100%;
+	
+}
+.nav-link{
+	color: white !important;
+	padding-right: 20px !important;
+	padding-left: 20px !important;
+	
+}
+.caretLogo{
+	
+	margin-left: 40px !important;
+}
+.offices{
+	margin-top: 13px !important;
+}
+.login{
+	margin-top: 10px;
+}
+@media screen and (min-width: 1100px) {
+	.navbar {
+		width: 100% !important;
+	}
+	
+	
+ }
+ @media (max-width: 960px) and (min-width: 769px) {
+	.navbar {
+		width: 100% !important;
+		display: flex !important;
+	
+	}
+	.res{
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+	}
+	.navbar-nav{
+		width: 50% !important;
+	}
+	.nav-link{
+		margin-right: 10px !important;
+		padding:10px !important;
+		font-size: 8px !important;
+	}
+	
+ }
+ .center{
+	 padding-left: 50px;
+ }

@@ -8,11 +8,15 @@ import { PostsService } from '../../services/post.service';
 })
 export class BlogComponent implements OnInit {
 
-  public posts: PostsResponse;
+  public posts: PostsResponse =  {
+    top:[],
+    base_url:null
+  };;
 
   constructor(private postsService:PostsService) { 
-  	      this.postsService.topPosts().subscribe(res => {
-        this.posts = res['data']
+  	      this.postsService.index().subscribe(res => {
+        this.posts = res['data'];
+        console.log('work as dangerious');
       },err => console.log(err));
 
   }

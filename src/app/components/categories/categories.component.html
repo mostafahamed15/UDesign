@@ -6,18 +6,18 @@
                 <h3>Featured categories</h3>
             
                 <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-                    <div ngxSlickItem *ngFor="let category of topp['topCats']" class="slide">
+                    <div ngxSlickItem *ngFor="let category of topp['topCats']" class="slide" routerLink = "/allCaregories">
                                 <div class="box-content">
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <div style="height: 155px; width:235px" class="main-img">
                                                 <a href="parallax-category-shop.html">
-                                                    <img  height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
+                                                    <img style="height: 155px; width:235px" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
                                                 </a>
                                             </div>
                                             <div class="overlay-img">
                                                 <a href="parallax-category-shop.html">
-                                                    <img height="155" width="235" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
+                                                    <img style="height: 155px; width:235px" class="img-responsive" src="{{category['xfeatured_image']}}" alt="img" />
                                                 </a>
                                             </div>
                                                <h4 class="product-name"><a href="/categ">{{category['category_name']}}</a></h4>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PackageService } from '../../services/package.service'
-
+import { ProductService } from '../../services/product.service';
+import { RouterModule, Router } from '@angular/router';
 @Component({
   selector: 'app-package',
   templateUrl: './package.component.html',
@@ -8,13 +9,18 @@ import { PackageService } from '../../services/package.service'
 })
 export class PackageComponent implements OnInit {
 packages: any;
-  constructor(public packageService: PackageService) { 
-    this.packageService.get("data").subscribe((res)=>{
-      this.packages = res['data'];
-      console.log(this.packages)
-   })
-  }
 
+  constructor(public packageService: PackageService,
+  public router: Router,
+  public productService: ProductService) { 
+    this.packageService.get({}).subscribe((res)=>{
+      this.packages = res['data']['packages'];
+      console.log(this.packages);
+   });
+  }
+  product(id){
+    this.router.navigateByUrl('product/' + id);
+  }
   ngOnInit() {
   }
 

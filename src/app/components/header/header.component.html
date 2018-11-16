@@ -1,71 +1,108 @@
 
-        <!-- /.topbar -->
-        <header style="height: 100px;     background-color: rgba(32,95,118,.7);
-    z-index: 10; position: fixed; width: 100%;">
-            <div class="container">
-
-<!--                 <div class="header-social">
-                    <ul class="list-social">
-                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" class="vk"><i class="fa fa-vk"></i></a></li>
-                        <li><a href="#" class="behance"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                </div> -->
-                <!-- /.header-social -->
-<!--                 <div class="top-cart">
-                    <a href="/cart">
-                        <i class="pe-7s-cart"></i>
-                        <span>2</span>
-                    </a>
-                </div> -->
-                <!-- /.top-cart -->
-                <nav class="main-nav" style="    top: 46px ">
-                <a class="logo" href="index.html" style="right:auto;     top: -35px;">
-                    <img width="90px" src="assets/images/logo.png" alt="img" style="    right:none;"  />
-                </a>
-                           
-                    <div class="minimal-menu">
-                        <ul class="menu">
-  
-                            <li class="current-menu-item">
-                                <a href="/home">HOME</a>
-                            </li>
+               
+                <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+                        <a class="navbar-brand" href="#"> <img width="90px" src="assets/images/logo.png" alt="img" /></a>
+                        <button class="navbar-toggler  " type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+                          <ul class="navbar-nav mr-auto center">
+                                <li>
+                                        <a class="nav-link" routerLink="/home">HOME</a>
+                                    </li>
+                                    <li>
+                                            <a class="nav-link" routerLink="/products">ALL PRODUCTS</a>
+                                        </li>
+                            
                             <li>
-                                <a href="/products">ALL PRODUCTS</a>
-                            </li>
-                            <li>
-                                <a href="portfolio.html">OFFICES</a>
-                                <ul class="sub-menu">
-                                    <li><a href="/finishing">Finishing Offices</a></li>
-                                    <li><a href="/interior">Interior Offices</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/news">NEWS</a>
-                            </li>
-                            <li>
-                                <a href="/profile">PROFILE</a>
-                            </li>
-                            <li><a href="/contact">CONTACT</a></li>
-                            <li class="hidden-xs">
-                                <div class="wrap-search">
-                                    <form action="#" class="search-form">
-                                        <input type="text" placeholder="Search.." />
-                                        <button type="submit"><i class="pe-7s-search"></i></button>
-                                    </form>
-                                </div>
-                                <!-- /.search-form -->
-                            </li>
-                            <li>
+                                    <a class="nav-link" routerLink="/news">NEWS</a>
+                                </li>
+                                <li>
+                                        <a class="nav-link" routerLink="/package">All packages</a>
+                                    </li>
                                     
-                                <button (click)="open()" type="button"  class="btn btn-primary sign-in"><a >Log in</a> </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.minimal-menu -->
-                </nav>
-                <!-- /.main-nav -->
-            </div>
-        </header>
+                                    <li><a class="nav-link" routerLink="/allCaregories">ALL CATEGORIES</a></li>
+                                    <li><a class="nav-link" routerLink="/contact">CONTACT</a></li>
+                                    <li class="nav-item dropdown" ngbDropdown>
+                                        <a class="nav-link dropdown-toggle" id="id01"  ngbDropdownToggle>OFFICES</a>
+                                        <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+                                          <a class="dropdown-item" routerLink="/finishing">Finishing Offices</a>
+                                          <a class="dropdown-item" routerLink="/interior">Interior Offices</a>
+                                        </div>
+                                      </li>
+                                    <li *ngIf ="!user; else userInfo" class="login">
+                                    
+                                            <button (click)="open()" type="button"  class="btn btn-default "><a >Log in</a> </button>
+                                        </li>
+                                        <ng-template #userInfo>
+                                    <li class="nav-item dropdown res" ngbDropdown>
+                                            <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle style="margin-top: -10px"> <img width="30px" height="40px" id="dropdownBasic1" ngbDropdownToggle src = "{{user.ximage || '../assets/images/logo.png'}}" alt="user pic" ></a>
+                                            <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+                                              <a class="dropdown-item" >{{user['name']}}</a>
+                                              <a class="dropdown-item" routerLink="/profile" >Profile</a>
+                                              <a class="dropdown-item" (click) = "logout()" >Log out</a>
+                                            </div>
+                                          </li>
+                                        </ng-template>
+                                          <li class="nav-item dropdown res" ngbDropdown>
+                                                <a class="nav-link dropdown-toggle" id="id01"  ngbDropdownToggle><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                                <div class="dropdown-menu cart" aria-labelledby="id01" ngbDropdownMenu>
+                                                        <form action="#" class="shop-form" *ngIf="shoppingCart else empty">
+                                                                <div class="table-responsive">
+                                                                    <table class="shop-table table" cellspacing="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="product-remove"></th>
+                                                                                <th class="product-thumbnail"></th>
+                                                                                <th class="product-name">Product</th>
+                                                                                <th class="product-price">Price</th>
+                                                                                <th class="product-quantity">Quantity</th>
+                                                                                <th class="product-subtotal">Total</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody *ngIf="!shoppingCart" #loading>
+                                                                              <tr class="cart_item" >
+                                                                                  <td colspan="5">
+                                                                                      <h1>hello</h1>
+                                                                                  </td>
+                                                                              </tr>
+                                                                        </tbody>
+                                                                        <tbody *ngIf="shoppingCart else loading">
+                                                                            <tr class="cart_item" *ngFor="let product of shoppingCart" >
+                                                                                <td class="product-remove"><a href="#" class="remove"><i class="fa fa-times"></i></a></td>
+                                                                                <td class="product-thumbnail" style="width: 250px">
+                                                                                    <a routerLink="/product">
+                                                                                        <img style="width: 250px" class="img-responsive" src="{{product['details']['xfeatured_image']}}" alt="img" />
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="product-name">
+                                                                                    <a href="single-product.html">
+                                                                                      {{product['details']['description']}}
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="product-price"><span class="amount">{{product['price']}} LE</span></td>
+                                                                                <td class="product-quantity">
+                                                                                    <div class="quantity">
+                                                                                        <button class="minus-btn"><i class="fa fa-minus"></i></button>
+                                                                                        <input type="text" value="1" style="width: 20%" />
+                                                                                        <button class="plus-btn"><i class="fa fa-plus"></i></button>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td class="product-subtotal"><span class="amount">{{product['price']}} LE</span></td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                            </table>
+                                                                            </div>
+                                                                            </form>
+                                                                            <ng-template #empty>
+                                                                                <p>Empty</p>
+                                                                            </ng-template>
+                                                                            
+                                                  <hr>
+                                                  <button class="dropdown-item" routerLink="/shoppingCart" routerLinkActive = "active" style="text-align: center">view cart</button>
+
+                                                </div>
+                                              </li>
+                          </ul>
+                        </div>
+                      </nav>

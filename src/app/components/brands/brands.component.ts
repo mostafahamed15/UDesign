@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BrandService } from '../../services/brand.service'
+import { BrandService } from '../../services/brand.service';
 import { SlickModule } from 'ngx-slick';
-
-
-
 
 
 @Component({
@@ -17,7 +14,7 @@ export class BrandsComponent {
   public title:string=null
   private last:number = 0;
   private hasMore:boolean = true;
-    slideConfig = {'slidesToShow': 6, 'slidesToScroll': 1};
+    slideConfig = {'slidesToShow': 4, 'slidesToScroll': 1, autoplay: true, autoplaySpeed: 1000};
 
 
   constructor( public  brandService: BrandService) {

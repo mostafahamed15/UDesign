@@ -1,24 +1,18 @@
 
-<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+<ngx-slick class="carousel"  #slickModal="slick-modal" [config]="slideConfig">
   <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <div class="box-content">
                   <div class="category-item">
                       <div class="category-thumb">
                           <div style="height: 400px; width:1000px" class="main-img">
-                              <a href="parallax-category-shop.html">
-                                  <img  height="400" width="1000" class="img-responsive" src="{{slide.ximage}}" alt="img" />
+                              <a >
+                                  <img  style="height: 400px; width:1000px;  object-fit: cover;" class="img-responsive" src="{{slide.ximage}}" alt="img" />
                               </a>
                           </div>
-                          <div class="overlay-img">
-                              <a href="parallax-category-shop.html">
-                                  <img height="400" width="1000" class="img-responsive" src="{{slide.ximage}}" alt="img" />
-                              </a>
-                          </div>
-                             <h4 class="product-name"><a href="/categ">{{advertisment_name}}</a></h4>
                       </div>
                      
                   </div>
-<h4><a href="parallax-category-shop.html">{{advertisment_name}}</a></h4>
+<h4><a >{{advertisment_name}}</a></h4>
   </div>
 </div>
 </ngx-slick>

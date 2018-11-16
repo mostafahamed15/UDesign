@@ -1,5 +1,64 @@
-<div *ngIf = "packages">
-  <div *ngFor = 'let package of packages'>
-
+<div class="main" style="padding-top: 200px;">
+    <div class="container">
+        <div class="header-page">
+            <h1>All packages</h1>
+        </div>
+        <!-- /.header-page -->
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="main-content">
+                    <div class="top-products">
+                        <div class="showing-results">
+                            SHOWING 1–9 OF 100 RESULTS
+                        </div>
+                        <div class="sortby">
+                            <select class="custom-select">
+                                <option value="0">DEFAULT SORTING</option>
+                                <option value="1">Price: Lowest First</option>
+                                <option value="2">Price: Highest First</option>
+                                <option value="3">Best seller</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-product row">
+                        <div *ngFor="let package of packages" class="col-md-4 col-sm-6">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <div class="main-img" style="width: 200px; height: 150px">
+                                        <a routerLink ="/Package/{{package['id']}}">
+                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                        </a>
+                                    </div>
+                                    <div class="overlay-img">
+                                        <a routerLink ="/package/{{package['id']}}">
+                                            <img style="width: 200px; height: 150px" class="img-responsive" src="{{package['xfeatured_image']}}" alt="img" />
+                                        </a>
+                                    </div>
+                                    <a routerLink ="/package/{{package['id']}}" class="details"><i class="pe-7s-search"></i></a>
+                                </div>
+                                <h4 class="product-name"><a routerLink ="/package/{{package['id']}}">{{package.name}}</a></h4>
+                                <p class="product-price">
+                                {{package.lowest_price}} EGP
+                                </p>
+                                <div class="group-buttons">
+                                    <button type="button" (click) = "cart(1)" class="add-to-cart" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                    <span>Add to Cart</span>
+                                    </button>
+                                    <button type="button" data-toggle="tooltip" data-placement="top" title="Compare this Product">
+                                    <i class="pe-7s-repeat"></i>
+                                    </button>
+                                    <button type="button" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                    <i class="pe-7s-like"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+               
+            </div>
+        </div>
+    </div>
   </div>
-</div>
